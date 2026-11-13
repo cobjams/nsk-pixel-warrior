@@ -1,1080 +1,6636 @@
 {
-    "environments": {
-        "grid_width": 16,
-        "tile_size": 16,
-        "notes": "Tiles are 16x16. The DungeonTileSheet.java defines locations using a 1-based xy(column, row) format. For example, xy(1, 1) is the top-left tile.",
-        "tiles": [
-            {
-                "name": "NULL_TILE",
-                "index": -1,
-                "x": -1,
-                "y": -1
-            },
-            {
-                "name": "GROUND",
-                "index": 0,
-                "x": 1,
-                "y": 1
-            },
-            {
-                "name": "FLOOR",
-                "index": 0,
-                "x": 1,
-                "y": 1
-            },
-            {
-                "name": "FLOOR_DECO",
-                "index": 1,
-                "x": 2,
-                "y": 1
-            },
-            {
-                "name": "GRASS",
-                "index": 2,
-                "x": 3,
-                "y": 1
-            },
-            {
-                "name": "EMBERS",
-                "index": 3,
-                "x": 4,
-                "y": 1
-            },
-            {
-                "name": "FLOOR_SP",
-                "index": 4,
-                "x": 5,
-                "y": 1
-            },
-            {
-                "name": "FLOOR_ALT_1",
-                "index": 6,
-                "x": 7,
-                "y": 1
-            },
-            {
-                "name": "FLOOR_DECO_ALT",
-                "index": 7,
-                "x": 8,
-                "y": 1
-            },
-            {
-                "name": "GRASS_ALT",
-                "index": 8,
-                "x": 9,
-                "y": 1
-            },
-            {
-                "name": "EMBERS_ALT",
-                "index": 9,
-                "x": 10,
-                "y": 1
-            },
-            {
-                "name": "FLOOR_SP_ALT",
-                "index": 10,
-                "x": 11,
-                "y": 1
-            },
-            {
-                "name": "FLOOR_ALT_2",
-                "index": 12,
-                "x": 13,
-                "y": 1
-            },
-            {
-                "name": "ENTRANCE",
-                "index": 16,
-                "x": 1,
-                "y": 2
-            },
-            {
-                "name": "EXIT",
-                "index": 17,
-                "x": 2,
-                "y": 2
-            },
-            {
-                "name": "WELL",
-                "index": 18,
-                "x": 3,
-                "y": 2
-            },
-            {
-                "name": "EMPTY_WELL",
-                "index": 19,
-                "x": 4,
-                "y": 2
-            },
-            {
-                "name": "PEDESTAL",
-                "index": 20,
-                "x": 5,
-                "y": 2
-            },
-            {
-                "name": "ENTRANCE_SP",
-                "index": 22,
-                "x": 7,
-                "y": 2
-            },
-            {
-                "name": "CHASM",
-                "index": 24,
-                "x": 9,
-                "y": 2
-            },
-            {
-                "name": "CHASM_FLOOR",
-                "index": 25,
-                "x": 10,
-                "y": 2
-            },
-            {
-                "name": "CHASM_FLOOR_SP",
-                "index": 26,
-                "x": 11,
-                "y": 2
-            },
-            {
-                "name": "CHASM_WALL",
-                "index": 27,
-                "x": 12,
-                "y": 2
-            },
-            {
-                "name": "CHASM_WATER",
-                "index": 28,
-                "x": 13,
-                "y": 2
-            },
-            {
-                "name": "WATER",
-                "index": 32,
-                "x": 1,
-                "y": 3
-            },
-            {
-                "name": "FLAT_WALLS",
-                "index": 48,
-                "x": 1,
-                "y": 4
-            },
-            {
-                "name": "FLAT_WALL",
-                "index": 48,
-                "x": 1,
-                "y": 4
-            },
-            {
-                "name": "FLAT_WALL_DECO",
-                "index": 49,
-                "x": 2,
-                "y": 4
-            },
-            {
-                "name": "FLAT_BOOKSHELF",
-                "index": 50,
-                "x": 3,
-                "y": 4
-            },
-            {
-                "name": "FLAT_WALL_ALT",
-                "index": 52,
-                "x": 5,
-                "y": 4
-            },
-            {
-                "name": "FLAT_WALL_DECO_ALT",
-                "index": 53,
-                "x": 6,
-                "y": 4
-            },
-            {
-                "name": "FLAT_BOOKSHELF_ALT",
-                "index": 54,
-                "x": 7,
-                "y": 4
-            },
-            {
-                "name": "FLAT_DOOR",
-                "index": 56,
-                "x": 9,
-                "y": 4
-            },
-            {
-                "name": "FLAT_DOOR_OPEN",
-                "index": 57,
-                "x": 10,
-                "y": 4
-            },
-            {
-                "name": "FLAT_DOOR_LOCKED",
-                "index": 58,
-                "x": 11,
-                "y": 4
-            },
-            {
-                "name": "FLAT_DOOR_CRYSTAL",
-                "index": 59,
-                "x": 12,
-                "y": 4
-            },
-            {
-                "name": "UNLOCKED_EXIT",
-                "index": 60,
-                "x": 13,
-                "y": 4
-            },
-            {
-                "name": "LOCKED_EXIT",
-                "index": 61,
-                "x": 14,
-                "y": 4
-            },
-            {
-                "name": "FLAT_OTHER",
-                "index": 64,
-                "x": 1,
-                "y": 5
-            },
-            {
-                "name": "FLAT_ALCHEMY_POT",
-                "index": 64,
-                "x": 1,
-                "y": 5
-            },
-            {
-                "name": "FLAT_BARRICADE",
-                "index": 65,
-                "x": 2,
-                "y": 5
-            },
-            {
-                "name": "FLAT_HIGH_GRASS",
-                "index": 66,
-                "x": 3,
-                "y": 5
-            },
-            {
-                "name": "FLAT_FURROWED_GRASS",
-                "index": 67,
-                "x": 4,
-                "y": 5
-            },
-            {
-                "name": "FLAT_HIGH_GRASS_ALT",
-                "index": 69,
-                "x": 6,
-                "y": 5
-            },
-            {
-                "name": "FLAT_FURROWED_ALT",
-                "index": 70,
-                "x": 7,
-                "y": 5
-            },
-            {
-                "name": "FLAT_STATUE",
-                "index": 72,
-                "x": 9,
-                "y": 5
-            },
-            {
-                "name": "FLAT_STATUE_SP",
-                "index": 73,
-                "x": 10,
-                "y": 5
-            },
-            {
-                "name": "FLAT_REGION_DECO",
-                "index": 74,
-                "x": 11,
-                "y": 5
-            },
-            {
-                "name": "FLAT_REGION_DECO_ALT",
-                "index": 75,
-                "x": 12,
-                "y": 5
-            },
-            {
-                "name": "FLAT_MINE_CRYSTAL",
-                "index": 76,
-                "x": 13,
-                "y": 5
-            },
-            {
-                "name": "FLAT_MINE_CRYSTAL_ALT",
-                "index": 77,
-                "x": 14,
-                "y": 5
-            },
-            {
-                "name": "FLAT_MINE_CRYSTAL_ALT_2",
-                "index": 78,
-                "x": 15,
-                "y": 5
-            },
-            {
-                "name": "FLAT_MINE_BOULDER",
-                "index": 76,
-                "x": 13,
-                "y": 5
-            },
-            {
-                "name": "FLAT_MINE_BOULDER_ALT",
-                "index": 77,
-                "x": 14,
-                "y": 5
-            },
-            {
-                "name": "FLAT_MINE_BOULDER_ALT_2",
-                "index": 78,
-                "x": 15,
-                "y": 5
-            },
-            {
-                "name": "RAISED_WALLS",
-                "index": 80,
-                "x": 1,
-                "y": 6
-            },
-            {
-                "name": "RAISED_WALL",
-                "index": 80,
-                "x": 1,
-                "y": 6
-            },
-            {
-                "name": "RAISED_WALL_DECO",
-                "index": 84,
-                "x": 5,
-                "y": 6
-            },
-            {
-                "name": "RAISED_WALL_DOOR",
-                "index": 88,
-                "x": 9,
-                "y": 6
-            },
-            {
-                "name": "RAISED_WALL_BOOKSHELF",
-                "index": 92,
-                "x": 13,
-                "y": 6
-            },
-            {
-                "name": "RAISED_WALL_ALT",
-                "index": 96,
-                "x": 1,
-                "y": 7
-            },
-            {
-                "name": "RAISED_WALL_DECO_ALT",
-                "index": 100,
-                "x": 5,
-                "y": 7
-            },
-            {
-                "name": "RAISED_WALL_BOOKSHELF_ALT",
-                "index": 108,
-                "x": 13,
-                "y": 7
-            },
-            {
-                "name": "RAISED_DOORS",
-                "index": 112,
-                "x": 1,
-                "y": 8
-            },
-            {
-                "name": "RAISED_DOOR",
-                "index": 112,
-                "x": 1,
-                "y": 8
-            },
-            {
-                "name": "RAISED_DOOR_OPEN",
-                "index": 113,
-                "x": 2,
-                "y": 8
-            },
-            {
-                "name": "RAISED_DOOR_LOCKED",
-                "index": 114,
-                "x": 3,
-                "y": 8
-            },
-            {
-                "name": "RAISED_DOOR_CRYSTAL",
-                "index": 115,
-                "x": 4,
-                "y": 8
-            },
-            {
-                "name": "RAISED_DOOR_SIDEWAYS",
-                "index": 116,
-                "x": 5,
-                "y": 8
-            },
-            {
-                "name": "RAISED_OTHER",
-                "index": 120,
-                "x": 9,
-                "y": 8
-            },
-            {
-                "name": "RAISED_ALCHEMY_POT",
-                "index": 120,
-                "x": 9,
-                "y": 8
-            },
-            {
-                "name": "RAISED_BARRICADE",
-                "index": 121,
-                "x": 10,
-                "y": 8
-            },
-            {
-                "name": "RAISED_HIGH_GRASS",
-                "index": 122,
-                "x": 11,
-                "y": 8
-            },
-            {
-                "name": "RAISED_FURROWED_GRASS",
-                "index": 123,
-                "x": 12,
-                "y": 8
-            },
-            {
-                "name": "RAISED_HIGH_GRASS_ALT",
-                "index": 125,
-                "x": 14,
-                "y": 8
-            },
-            {
-                "name": "RAISED_FURROWED_ALT",
-                "index": 126,
-                "x": 15,
-                "y": 8
-            },
-            {
-                "name": "RAISED_STATUE",
-                "index": 128,
-                "x": 1,
-                "y": 9
-            },
-            {
-                "name": "RAISED_STATUE_SP",
-                "index": 129,
-                "x": 2,
-                "y": 9
-            },
-            {
-                "name": "RAISED_REGION_DECO",
-                "index": 130,
-                "x": 3,
-                "y": 9
-            },
-            {
-                "name": "RAISED_REGION_DECO_ALT",
-                "index": 131,
-                "x": 4,
-                "y": 9
-            },
-            {
-                "name": "RAISED_MINE_CRYSTAL",
-                "index": 132,
-                "x": 5,
-                "y": 9
-            },
-            {
-                "name": "RAISED_MINE_CRYSTAL_ALT",
-                "index": 133,
-                "x": 6,
-                "y": 9
-            },
-            {
-                "name": "RAISED_MINE_CRYSTAL_ALT_2",
-                "index": 134,
-                "x": 7,
-                "y": 9
-            },
-            {
-                "name": "RAISED_MINE_BOULDER",
-                "index": 132,
-                "x": 5,
-                "y": 9
-            },
-            {
-                "name": "RAISED_MINE_BOULDER_ALT",
-                "index": 133,
-                "x": 6,
-                "y": 9
-            },
-            {
-                "name": "RAISED_MINE_BOULDER_ALT_2",
-                "index": 134,
-                "x": 7,
-                "y": 9
-            },
-            {
-                "name": "WALLS_INTERNAL",
-                "index": 144,
-                "x": 1,
-                "y": 10
-            },
-            {
-                "name": "WALL_INTERNAL",
-                "index": 144,
-                "x": 1,
-                "y": 10
-            },
-            {
-                "name": "WALL_INTERNAL_DECO",
-                "index": 160,
-                "x": 1,
-                "y": 11
-            },
-            {
-                "name": "WALL_INTERNAL_WOODEN",
-                "index": 176,
-                "x": 1,
-                "y": 12
-            },
-            {
-                "name": "WALLS_OVERHANG",
-                "index": 192,
-                "x": 1,
-                "y": 13
-            },
-            {
-                "name": "WALL_OVERHANG",
-                "index": 192,
-                "x": 1,
-                "y": 13
-            },
-            {
-                "name": "WALL_OVERHANG_DECO",
-                "index": 196,
-                "x": 5,
-                "y": 13
-            },
-            {
-                "name": "WALL_OVERHANG_WOODEN",
-                "index": 200,
-                "x": 9,
-                "y": 13
-            },
-            {
-                "name": "DOOR_SIDEWAYS_OVERHANG",
-                "index": 208,
-                "x": 1,
-                "y": 14
-            },
-            {
-                "name": "DOOR_SIDEWAYS_OVERHANG_CLOSED",
-                "index": 212,
-                "x": 5,
-                "y": 14
-            },
-            {
-                "name": "DOOR_SIDEWAYS_OVERHANG_LOCKED",
-                "index": 216,
-                "x": 9,
-                "y": 14
-            },
-            {
-                "name": "DOOR_SIDEWAYS_OVERHANG_CRYSTAL",
-                "index": 220,
-                "x": 13,
-                "y": 14
-            },
-            {
-                "name": "DOOR_OVERHANG",
-                "index": 224,
-                "x": 1,
-                "y": 15
-            },
-            {
-                "name": "DOOR_OVERHANG_OPEN",
-                "index": 225,
-                "x": 2,
-                "y": 15
-            },
-            {
-                "name": "DOOR_OVERHANG_CRYSTAL",
-                "index": 226,
-                "x": 3,
-                "y": 15
-            },
-            {
-                "name": "DOOR_SIDEWAYS",
-                "index": 227,
-                "x": 4,
-                "y": 15
-            },
-            {
-                "name": "DOOR_SIDEWAYS_LOCKED",
-                "index": 228,
-                "x": 5,
-                "y": 15
-            },
-            {
-                "name": "DOOR_SIDEWAYS_CRYSTAL",
-                "index": 229,
-                "x": 6,
-                "y": 15
-            },
-            {
-                "name": "EXIT_UNDERHANG",
-                "index": 230,
-                "x": 7,
-                "y": 15
-            },
-            {
-                "name": "OTHER_OVERHANG",
-                "index": 232,
-                "x": 9,
-                "y": 15
-            },
-            {
-                "name": "ALCHEMY_POT_OVERHANG",
-                "index": 232,
-                "x": 9,
-                "y": 15
-            },
-            {
-                "name": "BARRICADE_OVERHANG",
-                "index": 233,
-                "x": 10,
-                "y": 15
-            },
-            {
-                "name": "HIGH_GRASS_OVERHANG",
-                "index": 234,
-                "x": 11,
-                "y": 15
-            },
-            {
-                "name": "FURROWED_OVERHANG",
-                "index": 235,
-                "x": 12,
-                "y": 15
-            },
-            {
-                "name": "HIGH_GRASS_OVERHANG_ALT",
-                "index": 237,
-                "x": 14,
-                "y": 15
-            },
-            {
-                "name": "FURROWED_OVERHANG_ALT",
-                "index": 238,
-                "x": 15,
-                "y": 15
-            },
-            {
-                "name": "STATUE_OVERHANG",
-                "index": 240,
-                "x": 1,
-                "y": 16
-            },
-            {
-                "name": "STATUE_SP_OVERHANG",
-                "index": 241,
-                "x": 2,
-                "y": 16
-            },
-            {
-                "name": "REGION_DECO_OVERHANG",
-                "index": 242,
-                "x": 3,
-                "y": 16
-            },
-            {
-                "name": "REGION_DECO_ALT_OVERHANG",
-                "index": 243,
-                "x": 4,
-                "y": 16
-            },
-            {
-                "name": "MINE_CRYSTAL_OVERHANG",
-                "index": 244,
-                "x": 5,
-                "y": 16
-            },
-            {
-                "name": "MINE_CRYSTAL_OVERHANG_ALT",
-                "index": 245,
-                "x": 6,
-                "y": 16
-            },
-            {
-                "name": "MINE_CRYSTAL_OVERHANG_ALT_2",
-                "index": 246,
-                "x": 7,
-                "y": 16
-            },
-            {
-                "name": "MINE_BOULDER_OVERHANG",
-                "index": 244,
-                "x": 5,
-                "y": 16
-            },
-            {
-                "name": "MINE_BOULDER_OVERHANG_ALT",
-                "index": 245,
-                "x": 6,
-                "y": 16
-            },
-            {
-                "name": "MINE_BOULDER_OVERHANG_ALT_2",
-                "index": 246,
-                "x": 7,
-                "y": 16
-            },
-            {
-                "name": "HIGH_GRASS_UNDERHANG",
-                "index": 250,
-                "x": 11,
-                "y": 16
-            },
-            {
-                "name": "FURROWED_UNDERHANG",
-                "index": 251,
-                "x": 12,
-                "y": 16
-            },
-            {
-                "name": "HIGH_GRASS_UNDERHANG_ALT",
-                "index": 253,
-                "x": 14,
-                "y": 16
-            },
-            {
-                "name": "FURROWED_UNDERHANG_ALT",
-                "index": 254,
-                "x": 15,
-                "y": 16
-            }
-        ]
-    },
-    "sprites": {
-        "ScorpioSprite": {
-            "frame_width": 17,
-            "frame_height": 17
-        },
-        "GnollTricksterSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "CrystalSpireSprite": {
-            "frame_width": 24,
-            "frame_height": 41
-        },
-        "HermitCrabSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "ShamanSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "DM201Sprite": {
-            "frame_width": 21,
-            "frame_height": 18
-        },
-        "MonkSprite": {
-            "frame_width": 15,
-            "frame_height": 14
-        },
-        "RatSprite": {
-            "frame_width": 16,
-            "frame_height": 15
-        },
-        "GhostSprite": {
-            "frame_width": 14,
-            "frame_height": 15
-        },
-        "UndeadSprite": {
-            "frame_width": 12,
-            "frame_height": 16
-        },
-        "SpectralNecromancerSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "DM100Sprite": {
-            "frame_width": 16,
-            "frame_height": 14
-        },
-        "GnollSapperSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "DM200Sprite": {
-            "frame_width": 21,
-            "frame_height": 18
-        },
-        "LarvaSprite": {
-            "frame_width": 12,
-            "frame_height": 8
-        },
-        "RotLasherSprite": {
-            "frame_width": 12,
-            "frame_height": 16
-        },
-        "LotusSprite": {
-            "frame_width": 19,
-            "frame_height": 16
-        },
-        "ElementalSprite": {
-            "frame_width": 12,
-            "frame_height": 14
-        },
-        "SpawnerSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "SwarmSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "WarlockSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "SlimeSprite": {
-            "frame_width": 14,
-            "frame_height": 12
-        },
-        "GuardSprite": {
-            "frame_width": 12,
-            "frame_height": 16
-        },
-        "YogSprite": {
-            "frame_width": 20,
-            "frame_height": 19
-        },
-        "GnollGeomancerSprite": {
-            "frame_width": 12,
-            "frame_height": 16
-        },
-        "PhantomPiranhaSprite": {
-            "frame_width": 12,
-            "frame_height": 16
-        },
-        "ShopkeeperSprite": {
-            "frame_width": 14,
-            "frame_height": 14
-        },
-        "GnollGuardSprite": {
-            "frame_width": 12,
-            "frame_height": 16
-        },
-        "WraithSprite": {
-            "frame_width": 14,
-            "frame_height": 15
-        },
-        "RipperSprite": {
-            "frame_width": 15,
-            "frame_height": 14
-        },
-        "BanditSprite": {
-            "frame_width": 12,
-            "frame_height": 13
-        },
-        "ImpSprite": {
-            "frame_width": 12,
-            "frame_height": 14
-        },
-        "GreatCrabSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "FungalCoreSprite": {
-            "frame_width": 27,
-            "frame_height": 27
-        },
-        "GnollExileSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "MimicSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "CrystalGuardianSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "FistSprite": {
-            "frame_width": 24,
-            "frame_height": 17
-        },
-        "NewbornElementalSprite": {
-            "frame_width": 12,
-            "frame_height": 14
-        },
-        "BlacksmithSprite": {
-            "frame_width": 13,
-            "frame_height": 16
-        },
-        "SnakeSprite": {
-            "frame_width": 12,
-            "frame_height": 11
-        },
-        "NecromancerSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "TenguSprite": {
-            "frame_width": 14,
-            "frame_height": 16
-        },
-        "ShieldedSprite": {
-            "frame_width": 12,
-            "frame_height": 16
-        },
-        "StatueSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "PiranhaSprite": {
-            "frame_width": 12,
-            "frame_height": 16
-        },
-        "EyeSprite": {
-            "frame_width": 16,
-            "frame_height": 18
-        },
-        "GhoulSprite": {
-            "frame_width": 12,
-            "frame_height": 14
-        },
-        "CrystalWispSprite": {
-            "frame_width": 12,
-            "frame_height": 14
-        },
-        "FungalSentrySprite": {
-            "frame_width": 18,
-            "frame_height": 18
-        },
-        "FetidRatSprite": {
-            "frame_width": 16,
-            "frame_height": 15
-        },
-        "CrabSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "AlbinoSprite": {
-            "frame_width": 16,
-            "frame_height": 15
-        },
-        "PylonSprite": {
-            "frame_width": 10,
-            "frame_height": 20
-        },
-        "WandmakerSprite": {
-            "frame_width": 12,
-            "frame_height": 14
-        },
-        "ThiefSprite": {
-            "frame_width": 12,
-            "frame_height": 13
-        },
-        "BatSprite": {
-            "frame_width": 15,
-            "frame_height": 15
-        },
-        "SkeletonSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "EarthGuardianSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "AcidicSprite": {
-            "frame_width": 17,
-            "frame_height": 17
-        },
-        "SuccubusSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        },
-        "BruteSprite": {
-            "frame_width": 12,
-            "frame_height": 16
-        },
-        "DM300Sprite": {
-            "frame_width": 25,
-            "frame_height": 22
-        },
-        "RotHeartSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "BeeSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "RatKingSprite": {
-            "frame_width": 16,
-            "frame_height": 17
-        },
-        "FungalSpinnerSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "KingSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "SpinnerSprite": {
-            "frame_width": 16,
-            "frame_height": 16
-        },
-        "TormentedSpiritSprite": {
-            "frame_width": 14,
-            "frame_height": 15
-        },
-        "CausticSlimeSprite": {
-            "frame_width": 14,
-            "frame_height": 12
-        },
-        "SheepSprite": {
-            "frame_width": 16,
-            "frame_height": 15
-        },
-        "GolemSprite": {
-            "frame_width": 17,
-            "frame_height": 19
-        },
-        "GooSprite": {
-            "frame_width": 20,
-            "frame_height": 14
-        },
-        "SeniorSprite": {
-            "frame_width": 15,
-            "frame_height": 14
-        },
-        "GnollSprite": {
-            "frame_width": 12,
-            "frame_height": 15
-        }
-    },
-    "items": {
-        "SIZE": 16,
-        "notes": "items.png and item_icons.png are structured in a grid of 16x16 tiles. ItemSpriteSheet.java maps item IDs to these 16x16 frames using xy(column, row) matching.",
-        "layout": "Items are 16x16. The items.png texture has width 256 and height 512, which gives a 16x32 grid.",
-        "icons_layout": "item_icons.png texture size is the same, 256x512."
-    },
-    "heroes": {
-        "notes": "All hero class sprite sheets (warrior.png, mage.png, etc.) share an identical 16x15 frame structure (width 16px, height 15px) across 8 rows, mapped to armor tiers."
+  "environments": {
+    "grid_width": 16,
+    "tile_size": 16,
+    "notes": "Tiles are 16x16. The DungeonTileSheet.java defines locations using a 1-based xy(column, row) format. For example, xy(1, 1) is the top-left tile.",
+    "tiles": [
+      {
+        "name": "NULL_TILE",
+        "index": -1,
+        "x": -1,
+        "y": -1
+      },
+      {
+        "name": "GROUND",
+        "index": 0,
+        "x": 1,
+        "y": 1
+      },
+      {
+        "name": "FLOOR",
+        "index": 0,
+        "x": 1,
+        "y": 1
+      },
+      {
+        "name": "FLOOR_DECO",
+        "index": 1,
+        "x": 2,
+        "y": 1
+      },
+      {
+        "name": "GRASS",
+        "index": 2,
+        "x": 3,
+        "y": 1
+      },
+      {
+        "name": "EMBERS",
+        "index": 3,
+        "x": 4,
+        "y": 1
+      },
+      {
+        "name": "FLOOR_SP",
+        "index": 4,
+        "x": 5,
+        "y": 1
+      },
+      {
+        "name": "FLOOR_ALT_1",
+        "index": 6,
+        "x": 7,
+        "y": 1
+      },
+      {
+        "name": "FLOOR_DECO_ALT",
+        "index": 7,
+        "x": 8,
+        "y": 1
+      },
+      {
+        "name": "GRASS_ALT",
+        "index": 8,
+        "x": 9,
+        "y": 1
+      },
+      {
+        "name": "EMBERS_ALT",
+        "index": 9,
+        "x": 10,
+        "y": 1
+      },
+      {
+        "name": "FLOOR_SP_ALT",
+        "index": 10,
+        "x": 11,
+        "y": 1
+      },
+      {
+        "name": "FLOOR_ALT_2",
+        "index": 12,
+        "x": 13,
+        "y": 1
+      },
+      {
+        "name": "ENTRANCE",
+        "index": 16,
+        "x": 1,
+        "y": 2
+      },
+      {
+        "name": "EXIT",
+        "index": 17,
+        "x": 2,
+        "y": 2
+      },
+      {
+        "name": "WELL",
+        "index": 18,
+        "x": 3,
+        "y": 2
+      },
+      {
+        "name": "EMPTY_WELL",
+        "index": 19,
+        "x": 4,
+        "y": 2
+      },
+      {
+        "name": "PEDESTAL",
+        "index": 20,
+        "x": 5,
+        "y": 2
+      },
+      {
+        "name": "ENTRANCE_SP",
+        "index": 22,
+        "x": 7,
+        "y": 2
+      },
+      {
+        "name": "CHASM",
+        "index": 24,
+        "x": 9,
+        "y": 2
+      },
+      {
+        "name": "CHASM_FLOOR",
+        "index": 25,
+        "x": 10,
+        "y": 2
+      },
+      {
+        "name": "CHASM_FLOOR_SP",
+        "index": 26,
+        "x": 11,
+        "y": 2
+      },
+      {
+        "name": "CHASM_WALL",
+        "index": 27,
+        "x": 12,
+        "y": 2
+      },
+      {
+        "name": "CHASM_WATER",
+        "index": 28,
+        "x": 13,
+        "y": 2
+      },
+      {
+        "name": "WATER",
+        "index": 32,
+        "x": 1,
+        "y": 3
+      },
+      {
+        "name": "FLAT_WALLS",
+        "index": 48,
+        "x": 1,
+        "y": 4
+      },
+      {
+        "name": "FLAT_WALL",
+        "index": 48,
+        "x": 1,
+        "y": 4
+      },
+      {
+        "name": "FLAT_WALL_DECO",
+        "index": 49,
+        "x": 2,
+        "y": 4
+      },
+      {
+        "name": "FLAT_BOOKSHELF",
+        "index": 50,
+        "x": 3,
+        "y": 4
+      },
+      {
+        "name": "FLAT_WALL_ALT",
+        "index": 52,
+        "x": 5,
+        "y": 4
+      },
+      {
+        "name": "FLAT_WALL_DECO_ALT",
+        "index": 53,
+        "x": 6,
+        "y": 4
+      },
+      {
+        "name": "FLAT_BOOKSHELF_ALT",
+        "index": 54,
+        "x": 7,
+        "y": 4
+      },
+      {
+        "name": "FLAT_DOOR",
+        "index": 56,
+        "x": 9,
+        "y": 4
+      },
+      {
+        "name": "FLAT_DOOR_OPEN",
+        "index": 57,
+        "x": 10,
+        "y": 4
+      },
+      {
+        "name": "FLAT_DOOR_LOCKED",
+        "index": 58,
+        "x": 11,
+        "y": 4
+      },
+      {
+        "name": "FLAT_DOOR_CRYSTAL",
+        "index": 59,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "name": "UNLOCKED_EXIT",
+        "index": 60,
+        "x": 13,
+        "y": 4
+      },
+      {
+        "name": "LOCKED_EXIT",
+        "index": 61,
+        "x": 14,
+        "y": 4
+      },
+      {
+        "name": "FLAT_OTHER",
+        "index": 64,
+        "x": 1,
+        "y": 5
+      },
+      {
+        "name": "FLAT_ALCHEMY_POT",
+        "index": 64,
+        "x": 1,
+        "y": 5
+      },
+      {
+        "name": "FLAT_BARRICADE",
+        "index": 65,
+        "x": 2,
+        "y": 5
+      },
+      {
+        "name": "FLAT_HIGH_GRASS",
+        "index": 66,
+        "x": 3,
+        "y": 5
+      },
+      {
+        "name": "FLAT_FURROWED_GRASS",
+        "index": 67,
+        "x": 4,
+        "y": 5
+      },
+      {
+        "name": "FLAT_HIGH_GRASS_ALT",
+        "index": 69,
+        "x": 6,
+        "y": 5
+      },
+      {
+        "name": "FLAT_FURROWED_ALT",
+        "index": 70,
+        "x": 7,
+        "y": 5
+      },
+      {
+        "name": "FLAT_STATUE",
+        "index": 72,
+        "x": 9,
+        "y": 5
+      },
+      {
+        "name": "FLAT_STATUE_SP",
+        "index": 73,
+        "x": 10,
+        "y": 5
+      },
+      {
+        "name": "FLAT_REGION_DECO",
+        "index": 74,
+        "x": 11,
+        "y": 5
+      },
+      {
+        "name": "FLAT_REGION_DECO_ALT",
+        "index": 75,
+        "x": 12,
+        "y": 5
+      },
+      {
+        "name": "FLAT_MINE_CRYSTAL",
+        "index": 76,
+        "x": 13,
+        "y": 5
+      },
+      {
+        "name": "FLAT_MINE_CRYSTAL_ALT",
+        "index": 77,
+        "x": 14,
+        "y": 5
+      },
+      {
+        "name": "FLAT_MINE_CRYSTAL_ALT_2",
+        "index": 78,
+        "x": 15,
+        "y": 5
+      },
+      {
+        "name": "FLAT_MINE_BOULDER",
+        "index": 76,
+        "x": 13,
+        "y": 5
+      },
+      {
+        "name": "FLAT_MINE_BOULDER_ALT",
+        "index": 77,
+        "x": 14,
+        "y": 5
+      },
+      {
+        "name": "FLAT_MINE_BOULDER_ALT_2",
+        "index": 78,
+        "x": 15,
+        "y": 5
+      },
+      {
+        "name": "RAISED_WALLS",
+        "index": 80,
+        "x": 1,
+        "y": 6
+      },
+      {
+        "name": "RAISED_WALL",
+        "index": 80,
+        "x": 1,
+        "y": 6
+      },
+      {
+        "name": "RAISED_WALL_DECO",
+        "index": 84,
+        "x": 5,
+        "y": 6
+      },
+      {
+        "name": "RAISED_WALL_DOOR",
+        "index": 88,
+        "x": 9,
+        "y": 6
+      },
+      {
+        "name": "RAISED_WALL_BOOKSHELF",
+        "index": 92,
+        "x": 13,
+        "y": 6
+      },
+      {
+        "name": "RAISED_WALL_ALT",
+        "index": 96,
+        "x": 1,
+        "y": 7
+      },
+      {
+        "name": "RAISED_WALL_DECO_ALT",
+        "index": 100,
+        "x": 5,
+        "y": 7
+      },
+      {
+        "name": "RAISED_WALL_BOOKSHELF_ALT",
+        "index": 108,
+        "x": 13,
+        "y": 7
+      },
+      {
+        "name": "RAISED_DOORS",
+        "index": 112,
+        "x": 1,
+        "y": 8
+      },
+      {
+        "name": "RAISED_DOOR",
+        "index": 112,
+        "x": 1,
+        "y": 8
+      },
+      {
+        "name": "RAISED_DOOR_OPEN",
+        "index": 113,
+        "x": 2,
+        "y": 8
+      },
+      {
+        "name": "RAISED_DOOR_LOCKED",
+        "index": 114,
+        "x": 3,
+        "y": 8
+      },
+      {
+        "name": "RAISED_DOOR_CRYSTAL",
+        "index": 115,
+        "x": 4,
+        "y": 8
+      },
+      {
+        "name": "RAISED_DOOR_SIDEWAYS",
+        "index": 116,
+        "x": 5,
+        "y": 8
+      },
+      {
+        "name": "RAISED_OTHER",
+        "index": 120,
+        "x": 9,
+        "y": 8
+      },
+      {
+        "name": "RAISED_ALCHEMY_POT",
+        "index": 120,
+        "x": 9,
+        "y": 8
+      },
+      {
+        "name": "RAISED_BARRICADE",
+        "index": 121,
+        "x": 10,
+        "y": 8
+      },
+      {
+        "name": "RAISED_HIGH_GRASS",
+        "index": 122,
+        "x": 11,
+        "y": 8
+      },
+      {
+        "name": "RAISED_FURROWED_GRASS",
+        "index": 123,
+        "x": 12,
+        "y": 8
+      },
+      {
+        "name": "RAISED_HIGH_GRASS_ALT",
+        "index": 125,
+        "x": 14,
+        "y": 8
+      },
+      {
+        "name": "RAISED_FURROWED_ALT",
+        "index": 126,
+        "x": 15,
+        "y": 8
+      },
+      {
+        "name": "RAISED_STATUE",
+        "index": 128,
+        "x": 1,
+        "y": 9
+      },
+      {
+        "name": "RAISED_STATUE_SP",
+        "index": 129,
+        "x": 2,
+        "y": 9
+      },
+      {
+        "name": "RAISED_REGION_DECO",
+        "index": 130,
+        "x": 3,
+        "y": 9
+      },
+      {
+        "name": "RAISED_REGION_DECO_ALT",
+        "index": 131,
+        "x": 4,
+        "y": 9
+      },
+      {
+        "name": "RAISED_MINE_CRYSTAL",
+        "index": 132,
+        "x": 5,
+        "y": 9
+      },
+      {
+        "name": "RAISED_MINE_CRYSTAL_ALT",
+        "index": 133,
+        "x": 6,
+        "y": 9
+      },
+      {
+        "name": "RAISED_MINE_CRYSTAL_ALT_2",
+        "index": 134,
+        "x": 7,
+        "y": 9
+      },
+      {
+        "name": "RAISED_MINE_BOULDER",
+        "index": 132,
+        "x": 5,
+        "y": 9
+      },
+      {
+        "name": "RAISED_MINE_BOULDER_ALT",
+        "index": 133,
+        "x": 6,
+        "y": 9
+      },
+      {
+        "name": "RAISED_MINE_BOULDER_ALT_2",
+        "index": 134,
+        "x": 7,
+        "y": 9
+      },
+      {
+        "name": "WALLS_INTERNAL",
+        "index": 144,
+        "x": 1,
+        "y": 10
+      },
+      {
+        "name": "WALL_INTERNAL",
+        "index": 144,
+        "x": 1,
+        "y": 10
+      },
+      {
+        "name": "WALL_INTERNAL_DECO",
+        "index": 160,
+        "x": 1,
+        "y": 11
+      },
+      {
+        "name": "WALL_INTERNAL_WOODEN",
+        "index": 176,
+        "x": 1,
+        "y": 12
+      },
+      {
+        "name": "WALLS_OVERHANG",
+        "index": 192,
+        "x": 1,
+        "y": 13
+      },
+      {
+        "name": "WALL_OVERHANG",
+        "index": 192,
+        "x": 1,
+        "y": 13
+      },
+      {
+        "name": "WALL_OVERHANG_DECO",
+        "index": 196,
+        "x": 5,
+        "y": 13
+      },
+      {
+        "name": "WALL_OVERHANG_WOODEN",
+        "index": 200,
+        "x": 9,
+        "y": 13
+      },
+      {
+        "name": "DOOR_SIDEWAYS_OVERHANG",
+        "index": 208,
+        "x": 1,
+        "y": 14
+      },
+      {
+        "name": "DOOR_SIDEWAYS_OVERHANG_CLOSED",
+        "index": 212,
+        "x": 5,
+        "y": 14
+      },
+      {
+        "name": "DOOR_SIDEWAYS_OVERHANG_LOCKED",
+        "index": 216,
+        "x": 9,
+        "y": 14
+      },
+      {
+        "name": "DOOR_SIDEWAYS_OVERHANG_CRYSTAL",
+        "index": 220,
+        "x": 13,
+        "y": 14
+      },
+      {
+        "name": "DOOR_OVERHANG",
+        "index": 224,
+        "x": 1,
+        "y": 15
+      },
+      {
+        "name": "DOOR_OVERHANG_OPEN",
+        "index": 225,
+        "x": 2,
+        "y": 15
+      },
+      {
+        "name": "DOOR_OVERHANG_CRYSTAL",
+        "index": 226,
+        "x": 3,
+        "y": 15
+      },
+      {
+        "name": "DOOR_SIDEWAYS",
+        "index": 227,
+        "x": 4,
+        "y": 15
+      },
+      {
+        "name": "DOOR_SIDEWAYS_LOCKED",
+        "index": 228,
+        "x": 5,
+        "y": 15
+      },
+      {
+        "name": "DOOR_SIDEWAYS_CRYSTAL",
+        "index": 229,
+        "x": 6,
+        "y": 15
+      },
+      {
+        "name": "EXIT_UNDERHANG",
+        "index": 230,
+        "x": 7,
+        "y": 15
+      },
+      {
+        "name": "OTHER_OVERHANG",
+        "index": 232,
+        "x": 9,
+        "y": 15
+      },
+      {
+        "name": "ALCHEMY_POT_OVERHANG",
+        "index": 232,
+        "x": 9,
+        "y": 15
+      },
+      {
+        "name": "BARRICADE_OVERHANG",
+        "index": 233,
+        "x": 10,
+        "y": 15
+      },
+      {
+        "name": "HIGH_GRASS_OVERHANG",
+        "index": 234,
+        "x": 11,
+        "y": 15
+      },
+      {
+        "name": "FURROWED_OVERHANG",
+        "index": 235,
+        "x": 12,
+        "y": 15
+      },
+      {
+        "name": "HIGH_GRASS_OVERHANG_ALT",
+        "index": 237,
+        "x": 14,
+        "y": 15
+      },
+      {
+        "name": "FURROWED_OVERHANG_ALT",
+        "index": 238,
+        "x": 15,
+        "y": 15
+      },
+      {
+        "name": "STATUE_OVERHANG",
+        "index": 240,
+        "x": 1,
+        "y": 16
+      },
+      {
+        "name": "STATUE_SP_OVERHANG",
+        "index": 241,
+        "x": 2,
+        "y": 16
+      },
+      {
+        "name": "REGION_DECO_OVERHANG",
+        "index": 242,
+        "x": 3,
+        "y": 16
+      },
+      {
+        "name": "REGION_DECO_ALT_OVERHANG",
+        "index": 243,
+        "x": 4,
+        "y": 16
+      },
+      {
+        "name": "MINE_CRYSTAL_OVERHANG",
+        "index": 244,
+        "x": 5,
+        "y": 16
+      },
+      {
+        "name": "MINE_CRYSTAL_OVERHANG_ALT",
+        "index": 245,
+        "x": 6,
+        "y": 16
+      },
+      {
+        "name": "MINE_CRYSTAL_OVERHANG_ALT_2",
+        "index": 246,
+        "x": 7,
+        "y": 16
+      },
+      {
+        "name": "MINE_BOULDER_OVERHANG",
+        "index": 244,
+        "x": 5,
+        "y": 16
+      },
+      {
+        "name": "MINE_BOULDER_OVERHANG_ALT",
+        "index": 245,
+        "x": 6,
+        "y": 16
+      },
+      {
+        "name": "MINE_BOULDER_OVERHANG_ALT_2",
+        "index": 246,
+        "x": 7,
+        "y": 16
+      },
+      {
+        "name": "HIGH_GRASS_UNDERHANG",
+        "index": 250,
+        "x": 11,
+        "y": 16
+      },
+      {
+        "name": "FURROWED_UNDERHANG",
+        "index": 251,
+        "x": 12,
+        "y": 16
+      },
+      {
+        "name": "HIGH_GRASS_UNDERHANG_ALT",
+        "index": 253,
+        "x": 14,
+        "y": 16
+      },
+      {
+        "name": "FURROWED_UNDERHANG_ALT",
+        "index": 254,
+        "x": 15,
+        "y": 16
+      }
+    ],
+    "sheets": [
+      {
+        "sector": 1,
+        "name": "Offices",
+        "tiles": "environment/tiles_sewers.png",
+        "water": "environment/water0.png",
+        "custom": [
+          "environment/custom_tiles/sewer_boss.png"
+        ],
+        "status": "done"
+      },
+      {
+        "sector": 2,
+        "name": "Screw Machine Dept",
+        "tiles": "environment/tiles_prison.png",
+        "water": "environment/water1.png",
+        "custom": [
+          "environment/custom_tiles/prison_quest.png",
+          "environment/custom_tiles/prison_exit.png"
+        ],
+        "status": "pending"
+      },
+      {
+        "sector": 3,
+        "name": "Grind Dept & Subterranean Ducts",
+        "tiles": "environment/tiles_caves.png",
+        "sub_tiles": [
+          "environment/tiles_caves_crystal.png",
+          "environment/tiles_caves_gnoll.png"
+        ],
+        "water": "environment/water2.png",
+        "custom": [
+          "environment/custom_tiles/caves_quest.png",
+          "environment/custom_tiles/caves_boss.png"
+        ],
+        "status": "pending"
+      },
+      {
+        "sector": 4,
+        "name": "Heat-Treat Dept",
+        "tiles": "environment/tiles_city.png",
+        "water": "environment/water3.png",
+        "custom": [
+          "environment/custom_tiles/city_quest.png",
+          "environment/custom_tiles/city_boss.png"
+        ],
+        "status": "pending"
+      },
+      {
+        "sector": 5,
+        "name": "Precision Assembly & R&D Labs",
+        "tiles": "environment/tiles_halls.png",
+        "water": "environment/water4.png",
+        "custom": [
+          "environment/custom_tiles/halls_special.png"
+        ],
+        "status": "pending"
+      }
+    ],
+    "terrain_features": {
+      "file": "environment/terrain_features.png",
+      "canvas_size": [
+        256,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_width": 16,
+      "grid_height": 8,
+      "tile_size": 16,
+      "status": "pending",
+      "layout_notes": "Rows 0-6 cols 0-7: Traps (color 0-7 = col, shape 0-6 = row). Rows 0-4 cols 9-14: Stage 0-4 High Grass (col 9-10), Furrowed Grass (col 11-12), Short Grass (col 13-14). Row 5 cols 9-10: Embers. Row 7 cols 0-15: Plants/Spills (index + 7*16)."
     }
+  },
+  "sprites": {
+    "ScorpioSprite": {
+      "frame_width": 17,
+      "frame_height": 17,
+      "file": "sprites/scorpio.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "security drone",
+      "status": "pending"
+    },
+    "GnollTricksterSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/gnoll.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "prankster employee",
+      "status": "pending"
+    },
+    "CrystalSpireSprite": {
+      "frame_width": 24,
+      "frame_height": 41,
+      "file": "sprites/crystal_spire.png",
+      "canvas_size": [
+        128,
+        128
+      ],
+      "mode": "RGB",
+      "lore_name": "toxic spire",
+      "status": "pending"
+    },
+    "HermitCrabSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/crab.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "armored roomba",
+      "status": "pending"
+    },
+    "ShamanSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/shaman.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "gnoll shaman",
+      "status": "pending"
+    },
+    "DM201Sprite": {
+      "frame_width": 21,
+      "frame_height": 18,
+      "file": "sprites/dm200.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "DM-201",
+      "status": "pending"
+    },
+    "MonkSprite": {
+      "frame_width": 15,
+      "frame_height": 14,
+      "file": "sprites/monk.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "brainwashed middle-manager",
+      "status": "pending"
+    },
+    "RatSprite": {
+      "frame_width": 16,
+      "frame_height": 15,
+      "file": "sprites/rat.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "mutated lab rat",
+      "status": "pending"
+    },
+    "GhostSprite": {
+      "frame_width": 14,
+      "frame_height": 15,
+      "file": "sprites/ghost.png",
+      "canvas_size": [
+        128,
+        16
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    "UndeadSprite": {
+      "frame_width": 12,
+      "frame_height": 16,
+      "file": "sprites/undead.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "SpectralNecromancerSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/necromancer.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "senior HR representative",
+      "status": "pending"
+    },
+    "DM100Sprite": {
+      "frame_width": 16,
+      "frame_height": 14,
+      "file": "sprites/dm100.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "DM-100",
+      "status": "pending"
+    },
+    "GnollSapperSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/gnoll_sapper.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "crazed engineer",
+      "status": "pending"
+    },
+    "DM200Sprite": {
+      "frame_width": 21,
+      "frame_height": 18,
+      "file": "sprites/dm200.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "DM-200",
+      "status": "pending"
+    },
+    "LarvaSprite": {
+      "frame_width": 12,
+      "frame_height": 8,
+      "file": "sprites/larva.png",
+      "canvas_size": [
+        128,
+        8
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "RotLasherSprite": {
+      "frame_width": 12,
+      "frame_height": 16,
+      "file": "sprites/rot_lasher.png",
+      "canvas_size": [
+        128,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "rot lasher",
+      "status": "pending"
+    },
+    "LotusSprite": {
+      "frame_width": 19,
+      "frame_height": 16,
+      "file": "sprites/lotus.png",
+      "canvas_size": [
+        32,
+        16
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    "ElementalSprite": {
+      "frame_width": 12,
+      "frame_height": 14,
+      "file": "sprites/elemental.png",
+      "canvas_size": [
+        512,
+        32
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "SpawnerSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/spawner.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "SwarmSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/swarm.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "RGBA",
+      "lore_name": "swarm of toxic flies",
+      "status": "pending"
+    },
+    "WarlockSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/warlock.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "corporate lawyer",
+      "status": "pending"
+    },
+    "SlimeSprite": {
+      "frame_width": 14,
+      "frame_height": 12,
+      "file": "sprites/slime.png",
+      "canvas_size": [
+        128,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "sludge pile",
+      "status": "pending"
+    },
+    "GuardSprite": {
+      "frame_width": 12,
+      "frame_height": 16,
+      "file": "sprites/guard.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "corrupted security guard",
+      "status": "pending"
+    },
+    "YogSprite": {
+      "frame_width": 20,
+      "frame_height": 19,
+      "file": "sprites/yog.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "GnollGeomancerSprite": {
+      "frame_width": 12,
+      "frame_height": 16,
+      "file": "sprites/gnoll_geomancer.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "rogue foreman",
+      "status": "pending"
+    },
+    "PhantomPiranhaSprite": {
+      "frame_width": 12,
+      "frame_height": 16,
+      "file": "sprites/piranha.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "RGBA",
+      "lore_name": "phantom piranha",
+      "status": "pending"
+    },
+    "ShopkeeperSprite": {
+      "frame_width": 14,
+      "frame_height": 14,
+      "file": "sprites/shopkeeper.png",
+      "canvas_size": [
+        32,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "GnollGuardSprite": {
+      "frame_width": 12,
+      "frame_height": 16,
+      "file": "sprites/gnoll_guard.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "corrupted guard",
+      "status": "pending"
+    },
+    "WraithSprite": {
+      "frame_width": 14,
+      "frame_height": 15,
+      "file": "sprites/wraith.png",
+      "canvas_size": [
+        128,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "holographic warning",
+      "status": "pending"
+    },
+    "RipperSprite": {
+      "frame_width": 15,
+      "frame_height": 14,
+      "file": "sprites/ripper.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "BanditSprite": {
+      "frame_width": 12,
+      "frame_height": 13,
+      "file": "sprites/thief.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "crazed supervisor",
+      "status": "pending"
+    },
+    "ImpSprite": {
+      "frame_width": 12,
+      "frame_height": 14,
+      "file": "sprites/demon.png",
+      "canvas_size": [
+        64,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "GreatCrabSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/crab.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "heavy roomba",
+      "status": "pending"
+    },
+    "FungalCoreSprite": {
+      "frame_width": 27,
+      "frame_height": 27,
+      "file": "sprites/fungal_core.png",
+      "canvas_size": [
+        128,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "fungal core",
+      "status": "pending"
+    },
+    "GnollExileSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/gnoll.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "exiled worker",
+      "status": "pending"
+    },
+    "MimicSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/mimic.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "mimic",
+      "status": "pending"
+    },
+    "CrystalGuardianSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/crystal_guardian.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "toxic crystal",
+      "status": "pending"
+    },
+    "FistSprite": {
+      "frame_width": 24,
+      "frame_height": 17,
+      "file": "sprites/yog_fists.png",
+      "canvas_size": [
+        256,
+        128
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "NewbornElementalSprite": {
+      "frame_width": 12,
+      "frame_height": 14,
+      "file": "sprites/elemental.png",
+      "canvas_size": [
+        512,
+        32
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "BlacksmithSprite": {
+      "frame_width": 13,
+      "frame_height": 16,
+      "file": "sprites/blacksmith.png",
+      "canvas_size": [
+        64,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "SnakeSprite": {
+      "frame_width": 12,
+      "frame_height": 11,
+      "file": "sprites/snake.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "mutated snake",
+      "status": "pending"
+    },
+    "NecromancerSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/necromancer.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "HR representative",
+      "status": "pending"
+    },
+    "TenguSprite": {
+      "frame_width": 14,
+      "frame_height": 16,
+      "file": "sprites/tengu.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "The Shift Manager",
+      "status": "pending"
+    },
+    "ShieldedSprite": {
+      "frame_width": 12,
+      "frame_height": 16,
+      "file": "sprites/brute.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "StatueSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/statue.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "automated defense turret",
+      "status": "pending"
+    },
+    "PiranhaSprite": {
+      "frame_width": 12,
+      "frame_height": 16,
+      "file": "sprites/piranha.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "RGBA",
+      "lore_name": "toxic mutant fish",
+      "status": "pending"
+    },
+    "EyeSprite": {
+      "frame_width": 16,
+      "frame_height": 18,
+      "file": "sprites/eye.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "evil eye",
+      "status": "pending"
+    },
+    "GhoulSprite": {
+      "frame_width": 12,
+      "frame_height": 14,
+      "file": "sprites/ghoul.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "brainwashed intern",
+      "status": "pending"
+    },
+    "CrystalWispSprite": {
+      "frame_width": 12,
+      "frame_height": 14,
+      "file": "sprites/crystal_wisp.png",
+      "canvas_size": [
+        512,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "floating spark",
+      "status": "pending"
+    },
+    "FungalSentrySprite": {
+      "frame_width": 18,
+      "frame_height": 18,
+      "file": "sprites/fungal_sentry.png",
+      "canvas_size": [
+        128,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "fungal sentry",
+      "status": "pending"
+    },
+    "FetidRatSprite": {
+      "frame_width": 16,
+      "frame_height": 15,
+      "file": "sprites/rat.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "fetid rat",
+      "status": "pending"
+    },
+    "CrabSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/crab.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "rogue roomba",
+      "status": "pending"
+    },
+    "AlbinoSprite": {
+      "frame_width": 16,
+      "frame_height": 15,
+      "file": "sprites/rat.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "albino lab rat",
+      "status": "pending"
+    },
+    "PylonSprite": {
+      "frame_width": 10,
+      "frame_height": 20,
+      "file": "sprites/pylon.png",
+      "canvas_size": [
+        32,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "power pylon",
+      "status": "pending"
+    },
+    "WandmakerSprite": {
+      "frame_width": 12,
+      "frame_height": 14,
+      "file": "sprites/wandmaker.png",
+      "canvas_size": [
+        64,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "ThiefSprite": {
+      "frame_width": 12,
+      "frame_height": 13,
+      "file": "sprites/thief.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "crazed intern",
+      "status": "pending"
+    },
+    "BatSprite": {
+      "frame_width": 15,
+      "frame_height": 15,
+      "file": "sprites/bat.png",
+      "canvas_size": [
+        128,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "mutated bat",
+      "status": "pending"
+    },
+    "SkeletonSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/skeleton.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "mindless drone",
+      "status": "pending"
+    },
+    "EarthGuardianSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/guardian.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "AcidicSprite": {
+      "frame_width": 17,
+      "frame_height": 17,
+      "file": "sprites/scorpio.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "acidic bio-drone",
+      "status": "pending"
+    },
+    "SuccubusSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/succubus.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "corporate recruiter",
+      "status": "pending"
+    },
+    "BruteSprite": {
+      "frame_width": 12,
+      "frame_height": 16,
+      "file": "sprites/brute.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "toxic shift worker",
+      "status": "pending"
+    },
+    "DM300Sprite": {
+      "frame_width": 25,
+      "frame_height": 22,
+      "file": "sprites/dm300.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "DM-300",
+      "status": "pending"
+    },
+    "RotHeartSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/rot_heart.png",
+      "canvas_size": [
+        128,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "rot heart",
+      "status": "pending"
+    },
+    "BeeSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/bee.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "golden bee",
+      "status": "pending"
+    },
+    "RatKingSprite": {
+      "frame_width": 16,
+      "frame_height": 17,
+      "file": "sprites/ratking.png",
+      "canvas_size": [
+        128,
+        128
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "FungalSpinnerSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/fungal_spinner.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "fungal spinner",
+      "status": "pending"
+    },
+    "KingSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/king.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "SpinnerSprite": {
+      "frame_width": 16,
+      "frame_height": 16,
+      "file": "sprites/spinner.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "industrial spider",
+      "status": "pending"
+    },
+    "TormentedSpiritSprite": {
+      "frame_width": 14,
+      "frame_height": 15,
+      "file": "sprites/wraith.png",
+      "canvas_size": [
+        128,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "tormented spirit",
+      "status": "pending"
+    },
+    "CausticSlimeSprite": {
+      "frame_width": 14,
+      "frame_height": 12,
+      "file": "sprites/slime.png",
+      "canvas_size": [
+        128,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "caustic sludge",
+      "status": "pending"
+    },
+    "SheepSprite": {
+      "frame_width": 16,
+      "frame_height": 15,
+      "file": "sprites/sheep.png",
+      "canvas_size": [
+        64,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    "GolemSprite": {
+      "frame_width": 17,
+      "frame_height": 19,
+      "file": "sprites/golem.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "security bot",
+      "status": "pending"
+    },
+    "GooSprite": {
+      "frame_width": 20,
+      "frame_height": 14,
+      "file": "sprites/goo.png",
+      "canvas_size": [
+        256,
+        16
+      ],
+      "mode": "P",
+      "lore_name": "Toxic Sludge",
+      "status": "pending"
+    },
+    "SeniorSprite": {
+      "frame_width": 15,
+      "frame_height": 14,
+      "file": "sprites/monk.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "lore_name": "senior manager",
+      "status": "pending"
+    },
+    "GnollSprite": {
+      "frame_width": 12,
+      "frame_height": 15,
+      "file": "sprites/gnoll.png",
+      "canvas_size": [
+        256,
+        64
+      ],
+      "mode": "P",
+      "lore_name": "crazed worker",
+      "status": "pending"
+    }
+  },
+  "items": {
+    "file": "sprites/items.png",
+    "canvas_size": [
+      256,
+      512
+    ],
+    "mode": "RGBA",
+    "grid_width": 16,
+    "grid_height": 32,
+    "tile_size": 16,
+    "status": "pending",
+    "notes": "items.png is 256x512 (16x32 grid of 16x16 cells). ItemSpriteSheet.java maps item constants using 1-based xy(col, row) and assignItemRect(width, height).",
+    "sprites": [
+      {
+        "name": "SOMETHING",
+        "category": "PLACEHOLDERS",
+        "index": 0,
+        "col": 1,
+        "row": 1,
+        "pixel_x": 0,
+        "pixel_y": 0,
+        "width": 8,
+        "height": 13
+      },
+      {
+        "name": "WEAPON_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 1,
+        "col": 2,
+        "row": 1,
+        "pixel_x": 16,
+        "pixel_y": 0,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "ARMOR_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 2,
+        "col": 3,
+        "row": 1,
+        "pixel_x": 32,
+        "pixel_y": 0,
+        "width": 14,
+        "height": 12
+      },
+      {
+        "name": "MISSILE_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 3,
+        "col": 4,
+        "row": 1,
+        "pixel_x": 48,
+        "pixel_y": 0,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "WAND_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 4,
+        "col": 5,
+        "row": 1,
+        "pixel_x": 64,
+        "pixel_y": 0,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "RING_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 5,
+        "col": 6,
+        "row": 1,
+        "pixel_x": 80,
+        "pixel_y": 0,
+        "width": 8,
+        "height": 10
+      },
+      {
+        "name": "ARTIFACT_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 6,
+        "col": 7,
+        "row": 1,
+        "pixel_x": 96,
+        "pixel_y": 0,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "TRINKET_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 7,
+        "col": 8,
+        "row": 1,
+        "pixel_x": 112,
+        "pixel_y": 0,
+        "width": 16,
+        "height": 11
+      },
+      {
+        "name": "FOOD_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 8,
+        "col": 9,
+        "row": 1,
+        "pixel_x": 128,
+        "pixel_y": 0,
+        "width": 15,
+        "height": 11
+      },
+      {
+        "name": "BOMB_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 9,
+        "col": 10,
+        "row": 1,
+        "pixel_x": 144,
+        "pixel_y": 0,
+        "width": 10,
+        "height": 13
+      },
+      {
+        "name": "POTION_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 10,
+        "col": 11,
+        "row": 1,
+        "pixel_x": 160,
+        "pixel_y": 0,
+        "width": 12,
+        "height": 14
+      },
+      {
+        "name": "SEED_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 11,
+        "col": 12,
+        "row": 1,
+        "pixel_x": 176,
+        "pixel_y": 0,
+        "width": 10,
+        "height": 10
+      },
+      {
+        "name": "SCROLL_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 12,
+        "col": 13,
+        "row": 1,
+        "pixel_x": 192,
+        "pixel_y": 0,
+        "width": 15,
+        "height": 14
+      },
+      {
+        "name": "STONE_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 13,
+        "col": 14,
+        "row": 1,
+        "pixel_x": 208,
+        "pixel_y": 0,
+        "width": 14,
+        "height": 12
+      },
+      {
+        "name": "ELIXIR_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 14,
+        "col": 15,
+        "row": 1,
+        "pixel_x": 224,
+        "pixel_y": 0,
+        "width": 12,
+        "height": 14
+      },
+      {
+        "name": "SPELL_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 15,
+        "col": 16,
+        "row": 1,
+        "pixel_x": 240,
+        "pixel_y": 0,
+        "width": 8,
+        "height": 16
+      },
+      {
+        "name": "MOB_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 16,
+        "col": 1,
+        "row": 2,
+        "pixel_x": 0,
+        "pixel_y": 16,
+        "width": 15,
+        "height": 14
+      },
+      {
+        "name": "DOCUMENT_HOLDER",
+        "category": "PLACEHOLDERS",
+        "index": 17,
+        "col": 2,
+        "row": 2,
+        "pixel_x": 16,
+        "pixel_y": 16,
+        "width": 10,
+        "height": 11
+      },
+      {
+        "name": "GOLD",
+        "category": "UNCOLLECTIBLE",
+        "index": 18,
+        "col": 3,
+        "row": 2,
+        "pixel_x": 32,
+        "pixel_y": 16,
+        "width": 15,
+        "height": 13
+      },
+      {
+        "name": "ENERGY",
+        "category": "UNCOLLECTIBLE",
+        "index": 19,
+        "col": 4,
+        "row": 2,
+        "pixel_x": 48,
+        "pixel_y": 16,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "DEWDROP",
+        "category": "UNCOLLECTIBLE",
+        "index": 21,
+        "col": 6,
+        "row": 2,
+        "pixel_x": 80,
+        "pixel_y": 16,
+        "width": 10,
+        "height": 10
+      },
+      {
+        "name": "PETAL",
+        "category": "UNCOLLECTIBLE",
+        "index": 22,
+        "col": 7,
+        "row": 2,
+        "pixel_x": 96,
+        "pixel_y": 16,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "name": "SANDBAG",
+        "category": "UNCOLLECTIBLE",
+        "index": 23,
+        "col": 8,
+        "row": 2,
+        "pixel_x": 112,
+        "pixel_y": 16,
+        "width": 10,
+        "height": 10
+      },
+      {
+        "name": "SPIRIT_ARROW",
+        "category": "UNCOLLECTIBLE",
+        "index": 24,
+        "col": 9,
+        "row": 2,
+        "pixel_x": 128,
+        "pixel_y": 16,
+        "width": 11,
+        "height": 11
+      },
+      {
+        "name": "TENGU_BOMB",
+        "category": "UNCOLLECTIBLE",
+        "index": 26,
+        "col": 11,
+        "row": 2,
+        "pixel_x": 160,
+        "pixel_y": 16,
+        "width": 10,
+        "height": 10
+      },
+      {
+        "name": "TENGU_SHOCKER",
+        "category": "UNCOLLECTIBLE",
+        "index": 27,
+        "col": 12,
+        "row": 2,
+        "pixel_x": 176,
+        "pixel_y": 16,
+        "width": 10,
+        "height": 10
+      },
+      {
+        "name": "GEO_BOULDER",
+        "category": "UNCOLLECTIBLE",
+        "index": 28,
+        "col": 13,
+        "row": 2,
+        "pixel_x": 192,
+        "pixel_y": 16,
+        "width": 16,
+        "height": 14
+      },
+      {
+        "name": "BONES",
+        "category": "CONTAINERS",
+        "index": 32,
+        "col": 1,
+        "row": 3,
+        "pixel_x": 0,
+        "pixel_y": 32,
+        "width": 14,
+        "height": 11
+      },
+      {
+        "name": "REMAINS",
+        "category": "CONTAINERS",
+        "index": 33,
+        "col": 2,
+        "row": 3,
+        "pixel_x": 16,
+        "pixel_y": 32,
+        "width": 14,
+        "height": 11
+      },
+      {
+        "name": "TOMB",
+        "category": "CONTAINERS",
+        "index": 34,
+        "col": 3,
+        "row": 3,
+        "pixel_x": 32,
+        "pixel_y": 32,
+        "width": 14,
+        "height": 15
+      },
+      {
+        "name": "GRAVE",
+        "category": "CONTAINERS",
+        "index": 35,
+        "col": 4,
+        "row": 3,
+        "pixel_x": 48,
+        "pixel_y": 32,
+        "width": 14,
+        "height": 15
+      },
+      {
+        "name": "CHEST",
+        "category": "CONTAINERS",
+        "index": 36,
+        "col": 5,
+        "row": 3,
+        "pixel_x": 64,
+        "pixel_y": 32,
+        "width": 16,
+        "height": 14
+      },
+      {
+        "name": "LOCKED_CHEST",
+        "category": "CONTAINERS",
+        "index": 37,
+        "col": 6,
+        "row": 3,
+        "pixel_x": 80,
+        "pixel_y": 32,
+        "width": 16,
+        "height": 14
+      },
+      {
+        "name": "CRYSTAL_CHEST",
+        "category": "CONTAINERS",
+        "index": 38,
+        "col": 7,
+        "row": 3,
+        "pixel_x": 96,
+        "pixel_y": 32,
+        "width": 16,
+        "height": 14
+      },
+      {
+        "name": "EBONY_CHEST",
+        "category": "CONTAINERS",
+        "index": 39,
+        "col": 8,
+        "row": 3,
+        "pixel_x": 112,
+        "pixel_y": 32,
+        "width": 16,
+        "height": 14
+      },
+      {
+        "name": "ANKH",
+        "category": "MISC_CONSUMABLE",
+        "index": 48,
+        "col": 1,
+        "row": 4,
+        "pixel_x": 0,
+        "pixel_y": 48,
+        "width": 10,
+        "height": 16
+      },
+      {
+        "name": "STYLUS",
+        "category": "MISC_CONSUMABLE",
+        "index": 49,
+        "col": 2,
+        "row": 4,
+        "pixel_x": 16,
+        "pixel_y": 48,
+        "width": 12,
+        "height": 13
+      },
+      {
+        "name": "SEAL",
+        "category": "MISC_CONSUMABLE",
+        "index": 50,
+        "col": 3,
+        "row": 4,
+        "pixel_x": 32,
+        "pixel_y": 48,
+        "width": 13,
+        "height": 13
+      },
+      {
+        "name": "TORCH",
+        "category": "MISC_CONSUMABLE",
+        "index": 51,
+        "col": 4,
+        "row": 4,
+        "pixel_x": 48,
+        "pixel_y": 48,
+        "width": 12,
+        "height": 15
+      },
+      {
+        "name": "BEACON",
+        "category": "MISC_CONSUMABLE",
+        "index": 52,
+        "col": 5,
+        "row": 4,
+        "pixel_x": 64,
+        "pixel_y": 48,
+        "width": 16,
+        "height": 15
+      },
+      {
+        "name": "HONEYPOT",
+        "category": "MISC_CONSUMABLE",
+        "index": 53,
+        "col": 6,
+        "row": 4,
+        "pixel_x": 80,
+        "pixel_y": 48,
+        "width": 14,
+        "height": 12
+      },
+      {
+        "name": "SHATTPOT",
+        "category": "MISC_CONSUMABLE",
+        "index": 54,
+        "col": 7,
+        "row": 4,
+        "pixel_x": 96,
+        "pixel_y": 48,
+        "width": 14,
+        "height": 12
+      },
+      {
+        "name": "IRON_KEY",
+        "category": "MISC_CONSUMABLE",
+        "index": 55,
+        "col": 8,
+        "row": 4,
+        "pixel_x": 112,
+        "pixel_y": 48,
+        "width": 8,
+        "height": 14
+      },
+      {
+        "name": "GOLDEN_KEY",
+        "category": "MISC_CONSUMABLE",
+        "index": 56,
+        "col": 9,
+        "row": 4,
+        "pixel_x": 128,
+        "pixel_y": 48,
+        "width": 8,
+        "height": 14
+      },
+      {
+        "name": "CRYSTAL_KEY",
+        "category": "MISC_CONSUMABLE",
+        "index": 57,
+        "col": 10,
+        "row": 4,
+        "pixel_x": 144,
+        "pixel_y": 48,
+        "width": 8,
+        "height": 14
+      },
+      {
+        "name": "WORN_KEY",
+        "category": "MISC_CONSUMABLE",
+        "index": 58,
+        "col": 11,
+        "row": 4,
+        "pixel_x": 160,
+        "pixel_y": 48,
+        "width": 8,
+        "height": 14
+      },
+      {
+        "name": "MASK",
+        "category": "MISC_CONSUMABLE",
+        "index": 59,
+        "col": 12,
+        "row": 4,
+        "pixel_x": 176,
+        "pixel_y": 48,
+        "width": 11,
+        "height": 9
+      },
+      {
+        "name": "CROWN",
+        "category": "MISC_CONSUMABLE",
+        "index": 60,
+        "col": 13,
+        "row": 4,
+        "pixel_x": 192,
+        "pixel_y": 48,
+        "width": 13,
+        "height": 7
+      },
+      {
+        "name": "AMULET",
+        "category": "MISC_CONSUMABLE",
+        "index": 61,
+        "col": 14,
+        "row": 4,
+        "pixel_x": 208,
+        "pixel_y": 48,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "MASTERY",
+        "category": "MISC_CONSUMABLE",
+        "index": 62,
+        "col": 15,
+        "row": 4,
+        "pixel_x": 224,
+        "pixel_y": 48,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "name": "KIT",
+        "category": "MISC_CONSUMABLE",
+        "index": 63,
+        "col": 16,
+        "row": 4,
+        "pixel_x": 240,
+        "pixel_y": 48,
+        "width": 16,
+        "height": 15
+      },
+      {
+        "name": "SEAL_SHARD",
+        "category": "MISC_CONSUMABLE",
+        "index": 64,
+        "col": 1,
+        "row": 5,
+        "pixel_x": 0,
+        "pixel_y": 64,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "BROKEN_STAFF",
+        "category": "MISC_CONSUMABLE",
+        "index": 65,
+        "col": 2,
+        "row": 5,
+        "pixel_x": 16,
+        "pixel_y": 64,
+        "width": 14,
+        "height": 10
+      },
+      {
+        "name": "CLOAK_SCRAP",
+        "category": "MISC_CONSUMABLE",
+        "index": 66,
+        "col": 3,
+        "row": 5,
+        "pixel_x": 32,
+        "pixel_y": 64,
+        "width": 9,
+        "height": 9
+      },
+      {
+        "name": "BOW_FRAGMENT",
+        "category": "MISC_CONSUMABLE",
+        "index": 67,
+        "col": 4,
+        "row": 5,
+        "pixel_x": 48,
+        "pixel_y": 64,
+        "width": 12,
+        "height": 9
+      },
+      {
+        "name": "BROKEN_HILT",
+        "category": "MISC_CONSUMABLE",
+        "index": 68,
+        "col": 5,
+        "row": 5,
+        "pixel_x": 64,
+        "pixel_y": 64,
+        "width": 9,
+        "height": 9
+      },
+      {
+        "name": "TORN_PAGE",
+        "category": "MISC_CONSUMABLE",
+        "index": 69,
+        "col": 6,
+        "row": 5,
+        "pixel_x": 80,
+        "pixel_y": 64,
+        "width": 11,
+        "height": 13
+      },
+      {
+        "name": "TRINKET_CATA",
+        "category": "MISC_CONSUMABLE",
+        "index": 70,
+        "col": 7,
+        "row": 5,
+        "pixel_x": 96,
+        "pixel_y": 64,
+        "width": 12,
+        "height": 11
+      },
+      {
+        "name": "BOMB",
+        "category": "BOMBS",
+        "index": 80,
+        "col": 1,
+        "row": 6,
+        "pixel_x": 0,
+        "pixel_y": 80,
+        "width": 10,
+        "height": 13
+      },
+      {
+        "name": "DBL_BOMB",
+        "category": "BOMBS",
+        "index": 81,
+        "col": 2,
+        "row": 6,
+        "pixel_x": 16,
+        "pixel_y": 80,
+        "width": 14,
+        "height": 13
+      },
+      {
+        "name": "FIRE_BOMB",
+        "category": "BOMBS",
+        "index": 82,
+        "col": 3,
+        "row": 6,
+        "pixel_x": 32,
+        "pixel_y": 80,
+        "width": 13,
+        "height": 12
+      },
+      {
+        "name": "FROST_BOMB",
+        "category": "BOMBS",
+        "index": 83,
+        "col": 4,
+        "row": 6,
+        "pixel_x": 48,
+        "pixel_y": 80,
+        "width": 13,
+        "height": 12
+      },
+      {
+        "name": "REGROWTH_BOMB",
+        "category": "BOMBS",
+        "index": 84,
+        "col": 5,
+        "row": 6,
+        "pixel_x": 64,
+        "pixel_y": 80,
+        "width": 13,
+        "height": 12
+      },
+      {
+        "name": "SMOKE_BOMB",
+        "category": "BOMBS",
+        "index": 85,
+        "col": 6,
+        "row": 6,
+        "pixel_x": 80,
+        "pixel_y": 80,
+        "width": 13,
+        "height": 12
+      },
+      {
+        "name": "FLASHBANG",
+        "category": "BOMBS",
+        "index": 86,
+        "col": 7,
+        "row": 6,
+        "pixel_x": 96,
+        "pixel_y": 80,
+        "width": 10,
+        "height": 13
+      },
+      {
+        "name": "HOLY_BOMB",
+        "category": "BOMBS",
+        "index": 87,
+        "col": 8,
+        "row": 6,
+        "pixel_x": 112,
+        "pixel_y": 80,
+        "width": 10,
+        "height": 13
+      },
+      {
+        "name": "WOOLY_BOMB",
+        "category": "BOMBS",
+        "index": 88,
+        "col": 9,
+        "row": 6,
+        "pixel_x": 128,
+        "pixel_y": 80,
+        "width": 10,
+        "height": 13
+      },
+      {
+        "name": "NOISEMAKER",
+        "category": "BOMBS",
+        "index": 89,
+        "col": 10,
+        "row": 6,
+        "pixel_x": 144,
+        "pixel_y": 80,
+        "width": 10,
+        "height": 13
+      },
+      {
+        "name": "ARCANE_BOMB",
+        "category": "BOMBS",
+        "index": 90,
+        "col": 11,
+        "row": 6,
+        "pixel_x": 160,
+        "pixel_y": 80,
+        "width": 10,
+        "height": 13
+      },
+      {
+        "name": "SHRAPNEL_BOMB",
+        "category": "BOMBS",
+        "index": 91,
+        "col": 12,
+        "row": 6,
+        "pixel_x": 176,
+        "pixel_y": 80,
+        "width": 10,
+        "height": 13
+      },
+      {
+        "name": "WORN_SHORTSWORD",
+        "category": "WEP_TIER1",
+        "index": 96,
+        "col": 1,
+        "row": 7,
+        "pixel_x": 0,
+        "pixel_y": 96,
+        "width": 13,
+        "height": 13
+      },
+      {
+        "name": "CUDGEL",
+        "category": "WEP_TIER1",
+        "index": 97,
+        "col": 2,
+        "row": 7,
+        "pixel_x": 16,
+        "pixel_y": 96,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "GLOVES",
+        "category": "WEP_TIER1",
+        "index": 98,
+        "col": 3,
+        "row": 7,
+        "pixel_x": 32,
+        "pixel_y": 96,
+        "width": 12,
+        "height": 16
+      },
+      {
+        "name": "RAPIER",
+        "category": "WEP_TIER1",
+        "index": 99,
+        "col": 4,
+        "row": 7,
+        "pixel_x": 48,
+        "pixel_y": 96,
+        "width": 13,
+        "height": 14
+      },
+      {
+        "name": "DAGGER",
+        "category": "WEP_TIER1",
+        "index": 100,
+        "col": 5,
+        "row": 7,
+        "pixel_x": 64,
+        "pixel_y": 96,
+        "width": 12,
+        "height": 13
+      },
+      {
+        "name": "MAGES_STAFF",
+        "category": "WEP_TIER1",
+        "index": 101,
+        "col": 6,
+        "row": 7,
+        "pixel_x": 80,
+        "pixel_y": 96,
+        "width": 15,
+        "height": 16
+      },
+      {
+        "name": "SHORTSWORD",
+        "category": "WEP_TIER2",
+        "index": 104,
+        "col": 9,
+        "row": 7,
+        "pixel_x": 128,
+        "pixel_y": 96,
+        "width": 13,
+        "height": 13
+      },
+      {
+        "name": "HAND_AXE",
+        "category": "WEP_TIER2",
+        "index": 105,
+        "col": 10,
+        "row": 7,
+        "pixel_x": 144,
+        "pixel_y": 96,
+        "width": 12,
+        "height": 14
+      },
+      {
+        "name": "SPEAR",
+        "category": "WEP_TIER2",
+        "index": 106,
+        "col": 11,
+        "row": 7,
+        "pixel_x": 160,
+        "pixel_y": 96,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "QUARTERSTAFF",
+        "category": "WEP_TIER2",
+        "index": 107,
+        "col": 12,
+        "row": 7,
+        "pixel_x": 176,
+        "pixel_y": 96,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "DIRK",
+        "category": "WEP_TIER2",
+        "index": 108,
+        "col": 13,
+        "row": 7,
+        "pixel_x": 192,
+        "pixel_y": 96,
+        "width": 13,
+        "height": 14
+      },
+      {
+        "name": "SICKLE",
+        "category": "WEP_TIER2",
+        "index": 109,
+        "col": 14,
+        "row": 7,
+        "pixel_x": 208,
+        "pixel_y": 96,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "SWORD",
+        "category": "WEP_TIER3",
+        "index": 112,
+        "col": 1,
+        "row": 8,
+        "pixel_x": 0,
+        "pixel_y": 112,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "MACE",
+        "category": "WEP_TIER3",
+        "index": 113,
+        "col": 2,
+        "row": 8,
+        "pixel_x": 16,
+        "pixel_y": 112,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "SCIMITAR",
+        "category": "WEP_TIER3",
+        "index": 114,
+        "col": 3,
+        "row": 8,
+        "pixel_x": 32,
+        "pixel_y": 112,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "name": "ROUND_SHIELD",
+        "category": "WEP_TIER3",
+        "index": 115,
+        "col": 4,
+        "row": 8,
+        "pixel_x": 48,
+        "pixel_y": 112,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SAI",
+        "category": "WEP_TIER3",
+        "index": 116,
+        "col": 5,
+        "row": 8,
+        "pixel_x": 64,
+        "pixel_y": 112,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WHIP",
+        "category": "WEP_TIER3",
+        "index": 117,
+        "col": 6,
+        "row": 8,
+        "pixel_x": 80,
+        "pixel_y": 112,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "LONGSWORD",
+        "category": "WEP_TIER4",
+        "index": 120,
+        "col": 9,
+        "row": 8,
+        "pixel_x": 128,
+        "pixel_y": 112,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "BATTLE_AXE",
+        "category": "WEP_TIER4",
+        "index": 121,
+        "col": 10,
+        "row": 8,
+        "pixel_x": 144,
+        "pixel_y": 112,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "FLAIL",
+        "category": "WEP_TIER4",
+        "index": 122,
+        "col": 11,
+        "row": 8,
+        "pixel_x": 160,
+        "pixel_y": 112,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "RUNIC_BLADE",
+        "category": "WEP_TIER4",
+        "index": 123,
+        "col": 12,
+        "row": 8,
+        "pixel_x": 176,
+        "pixel_y": 112,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "ASSASSINS_BLADE",
+        "category": "WEP_TIER4",
+        "index": 124,
+        "col": 13,
+        "row": 8,
+        "pixel_x": 192,
+        "pixel_y": 112,
+        "width": 14,
+        "height": 15
+      },
+      {
+        "name": "CROSSBOW",
+        "category": "WEP_TIER4",
+        "index": 125,
+        "col": 14,
+        "row": 8,
+        "pixel_x": 208,
+        "pixel_y": 112,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "KATANA",
+        "category": "WEP_TIER4",
+        "index": 126,
+        "col": 15,
+        "row": 8,
+        "pixel_x": 224,
+        "pixel_y": 112,
+        "width": 15,
+        "height": 16
+      },
+      {
+        "name": "GREATSWORD",
+        "category": "WEP_TIER5",
+        "index": 128,
+        "col": 1,
+        "row": 9,
+        "pixel_x": 0,
+        "pixel_y": 128,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAR_HAMMER",
+        "category": "WEP_TIER5",
+        "index": 129,
+        "col": 2,
+        "row": 9,
+        "pixel_x": 16,
+        "pixel_y": 128,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "GLAIVE",
+        "category": "WEP_TIER5",
+        "index": 130,
+        "col": 3,
+        "row": 9,
+        "pixel_x": 32,
+        "pixel_y": 128,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "GREATAXE",
+        "category": "WEP_TIER5",
+        "index": 131,
+        "col": 4,
+        "row": 9,
+        "pixel_x": 48,
+        "pixel_y": 128,
+        "width": 12,
+        "height": 16
+      },
+      {
+        "name": "GREATSHIELD",
+        "category": "WEP_TIER5",
+        "index": 132,
+        "col": 5,
+        "row": 9,
+        "pixel_x": 64,
+        "pixel_y": 128,
+        "width": 12,
+        "height": 16
+      },
+      {
+        "name": "GAUNTLETS",
+        "category": "WEP_TIER5",
+        "index": 133,
+        "col": 6,
+        "row": 9,
+        "pixel_x": 80,
+        "pixel_y": 128,
+        "width": 13,
+        "height": 15
+      },
+      {
+        "name": "WAR_SCYTHE",
+        "category": "WEP_TIER5",
+        "index": 134,
+        "col": 7,
+        "row": 9,
+        "pixel_x": 96,
+        "pixel_y": 128,
+        "width": 14,
+        "height": 15
+      },
+      {
+        "name": "SPIRIT_BOW",
+        "category": "MISSILE_WEP",
+        "index": 144,
+        "col": 1,
+        "row": 10,
+        "pixel_x": 0,
+        "pixel_y": 144,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "THROWING_SPIKE",
+        "category": "MISSILE_WEP",
+        "index": 145,
+        "col": 2,
+        "row": 10,
+        "pixel_x": 16,
+        "pixel_y": 144,
+        "width": 11,
+        "height": 10
+      },
+      {
+        "name": "THROWING_KNIFE",
+        "category": "MISSILE_WEP",
+        "index": 146,
+        "col": 3,
+        "row": 10,
+        "pixel_x": 32,
+        "pixel_y": 144,
+        "width": 12,
+        "height": 13
+      },
+      {
+        "name": "THROWING_STONE",
+        "category": "MISSILE_WEP",
+        "index": 147,
+        "col": 4,
+        "row": 10,
+        "pixel_x": 48,
+        "pixel_y": 144,
+        "width": 12,
+        "height": 10
+      },
+      {
+        "name": "FISHING_SPEAR",
+        "category": "MISSILE_WEP",
+        "index": 148,
+        "col": 5,
+        "row": 10,
+        "pixel_x": 64,
+        "pixel_y": 144,
+        "width": 11,
+        "height": 11
+      },
+      {
+        "name": "SHURIKEN",
+        "category": "MISSILE_WEP",
+        "index": 149,
+        "col": 6,
+        "row": 10,
+        "pixel_x": 80,
+        "pixel_y": 144,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "THROWING_CLUB",
+        "category": "MISSILE_WEP",
+        "index": 150,
+        "col": 7,
+        "row": 10,
+        "pixel_x": 96,
+        "pixel_y": 144,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "THROWING_SPEAR",
+        "category": "MISSILE_WEP",
+        "index": 151,
+        "col": 8,
+        "row": 10,
+        "pixel_x": 112,
+        "pixel_y": 144,
+        "width": 13,
+        "height": 13
+      },
+      {
+        "name": "BOLAS",
+        "category": "MISSILE_WEP",
+        "index": 152,
+        "col": 9,
+        "row": 10,
+        "pixel_x": 128,
+        "pixel_y": 144,
+        "width": 15,
+        "height": 14
+      },
+      {
+        "name": "KUNAI",
+        "category": "MISSILE_WEP",
+        "index": 153,
+        "col": 10,
+        "row": 10,
+        "pixel_x": 144,
+        "pixel_y": 144,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "JAVELIN",
+        "category": "MISSILE_WEP",
+        "index": 154,
+        "col": 11,
+        "row": 10,
+        "pixel_x": 160,
+        "pixel_y": 144,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "TOMAHAWK",
+        "category": "MISSILE_WEP",
+        "index": 155,
+        "col": 12,
+        "row": 10,
+        "pixel_x": 176,
+        "pixel_y": 144,
+        "width": 13,
+        "height": 13
+      },
+      {
+        "name": "BOOMERANG",
+        "category": "MISSILE_WEP",
+        "index": 156,
+        "col": 13,
+        "row": 10,
+        "pixel_x": 192,
+        "pixel_y": 144,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "TRIDENT",
+        "category": "MISSILE_WEP",
+        "index": 157,
+        "col": 14,
+        "row": 10,
+        "pixel_x": 208,
+        "pixel_y": 144,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "THROWING_HAMMER",
+        "category": "MISSILE_WEP",
+        "index": 158,
+        "col": 15,
+        "row": 10,
+        "pixel_x": 224,
+        "pixel_y": 144,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "FORCE_CUBE",
+        "category": "MISSILE_WEP",
+        "index": 159,
+        "col": 16,
+        "row": 10,
+        "pixel_x": 240,
+        "pixel_y": 144,
+        "width": 11,
+        "height": 12
+      },
+      {
+        "name": "ARMOR_CLOTH",
+        "category": "ARMOR",
+        "index": 176,
+        "col": 1,
+        "row": 12,
+        "pixel_x": 0,
+        "pixel_y": 176,
+        "width": 15,
+        "height": 12
+      },
+      {
+        "name": "ARMOR_LEATHER",
+        "category": "ARMOR",
+        "index": 177,
+        "col": 2,
+        "row": 12,
+        "pixel_x": 16,
+        "pixel_y": 176,
+        "width": 14,
+        "height": 13
+      },
+      {
+        "name": "ARMOR_MAIL",
+        "category": "ARMOR",
+        "index": 178,
+        "col": 3,
+        "row": 12,
+        "pixel_x": 32,
+        "pixel_y": 176,
+        "width": 14,
+        "height": 12
+      },
+      {
+        "name": "ARMOR_SCALE",
+        "category": "ARMOR",
+        "index": 179,
+        "col": 4,
+        "row": 12,
+        "pixel_x": 48,
+        "pixel_y": 176,
+        "width": 14,
+        "height": 11
+      },
+      {
+        "name": "ARMOR_PLATE",
+        "category": "ARMOR",
+        "index": 180,
+        "col": 5,
+        "row": 12,
+        "pixel_x": 64,
+        "pixel_y": 176,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "ARMOR_WARRIOR",
+        "category": "ARMOR",
+        "index": 181,
+        "col": 6,
+        "row": 12,
+        "pixel_x": 80,
+        "pixel_y": 176,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "ARMOR_MAGE",
+        "category": "ARMOR",
+        "index": 182,
+        "col": 7,
+        "row": 12,
+        "pixel_x": 96,
+        "pixel_y": 176,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "ARMOR_ROGUE",
+        "category": "ARMOR",
+        "index": 183,
+        "col": 8,
+        "row": 12,
+        "pixel_x": 112,
+        "pixel_y": 176,
+        "width": 14,
+        "height": 12
+      },
+      {
+        "name": "ARMOR_HUNTRESS",
+        "category": "ARMOR",
+        "index": 184,
+        "col": 9,
+        "row": 12,
+        "pixel_x": 128,
+        "pixel_y": 176,
+        "width": 13,
+        "height": 15
+      },
+      {
+        "name": "ARMOR_DUELIST",
+        "category": "ARMOR",
+        "index": 185,
+        "col": 10,
+        "row": 12,
+        "pixel_x": 144,
+        "pixel_y": 176,
+        "width": 12,
+        "height": 13
+      },
+      {
+        "name": "ARMOR_CLERIC",
+        "category": "ARMOR",
+        "index": 186,
+        "col": 11,
+        "row": 12,
+        "pixel_x": 160,
+        "pixel_y": 176,
+        "width": 13,
+        "height": 14
+      },
+      {
+        "name": "WAND_MAGIC_MISSILE",
+        "category": "WANDS",
+        "index": 208,
+        "col": 1,
+        "row": 14,
+        "pixel_x": 0,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_FIREBOLT",
+        "category": "WANDS",
+        "index": 209,
+        "col": 2,
+        "row": 14,
+        "pixel_x": 16,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_FROST",
+        "category": "WANDS",
+        "index": 210,
+        "col": 3,
+        "row": 14,
+        "pixel_x": 32,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_LIGHTNING",
+        "category": "WANDS",
+        "index": 211,
+        "col": 4,
+        "row": 14,
+        "pixel_x": 48,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_DISINTEGRATION",
+        "category": "WANDS",
+        "index": 212,
+        "col": 5,
+        "row": 14,
+        "pixel_x": 64,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_PRISMATIC_LIGHT",
+        "category": "WANDS",
+        "index": 213,
+        "col": 6,
+        "row": 14,
+        "pixel_x": 80,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_CORROSION",
+        "category": "WANDS",
+        "index": 214,
+        "col": 7,
+        "row": 14,
+        "pixel_x": 96,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_LIVING_EARTH",
+        "category": "WANDS",
+        "index": 215,
+        "col": 8,
+        "row": 14,
+        "pixel_x": 112,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_BLAST_WAVE",
+        "category": "WANDS",
+        "index": 216,
+        "col": 9,
+        "row": 14,
+        "pixel_x": 128,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_CORRUPTION",
+        "category": "WANDS",
+        "index": 217,
+        "col": 10,
+        "row": 14,
+        "pixel_x": 144,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_WARDING",
+        "category": "WANDS",
+        "index": 218,
+        "col": 11,
+        "row": 14,
+        "pixel_x": 160,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_REGROWTH",
+        "category": "WANDS",
+        "index": 219,
+        "col": 12,
+        "row": 14,
+        "pixel_x": 176,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WAND_TRANSFUSION",
+        "category": "WANDS",
+        "index": 220,
+        "col": 13,
+        "row": 14,
+        "pixel_x": 192,
+        "pixel_y": 208,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_GARNET",
+        "category": "RINGS",
+        "index": 224,
+        "col": 1,
+        "row": 15,
+        "pixel_x": 0,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_RUBY",
+        "category": "RINGS",
+        "index": 225,
+        "col": 2,
+        "row": 15,
+        "pixel_x": 16,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_TOPAZ",
+        "category": "RINGS",
+        "index": 226,
+        "col": 3,
+        "row": 15,
+        "pixel_x": 32,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_EMERALD",
+        "category": "RINGS",
+        "index": 227,
+        "col": 4,
+        "row": 15,
+        "pixel_x": 48,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_ONYX",
+        "category": "RINGS",
+        "index": 228,
+        "col": 5,
+        "row": 15,
+        "pixel_x": 64,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_OPAL",
+        "category": "RINGS",
+        "index": 229,
+        "col": 6,
+        "row": 15,
+        "pixel_x": 80,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_TOURMALINE",
+        "category": "RINGS",
+        "index": 230,
+        "col": 7,
+        "row": 15,
+        "pixel_x": 96,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_SAPPHIRE",
+        "category": "RINGS",
+        "index": 231,
+        "col": 8,
+        "row": 15,
+        "pixel_x": 112,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_AMETHYST",
+        "category": "RINGS",
+        "index": 232,
+        "col": 9,
+        "row": 15,
+        "pixel_x": 128,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_QUARTZ",
+        "category": "RINGS",
+        "index": 233,
+        "col": 10,
+        "row": 15,
+        "pixel_x": 144,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_AGATE",
+        "category": "RINGS",
+        "index": 234,
+        "col": 11,
+        "row": 15,
+        "pixel_x": 160,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "RING_DIAMOND",
+        "category": "RINGS",
+        "index": 235,
+        "col": 12,
+        "row": 15,
+        "pixel_x": 176,
+        "pixel_y": 224,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ARTIFACT_CLOAK",
+        "category": "ARTIFACTS",
+        "index": 240,
+        "col": 1,
+        "row": 16,
+        "pixel_x": 0,
+        "pixel_y": 240,
+        "width": 9,
+        "height": 15
+      },
+      {
+        "name": "ARTIFACT_ARMBAND",
+        "category": "ARTIFACTS",
+        "index": 241,
+        "col": 2,
+        "row": 16,
+        "pixel_x": 16,
+        "pixel_y": 240,
+        "width": 16,
+        "height": 13
+      },
+      {
+        "name": "ARTIFACT_CAPE",
+        "category": "ARTIFACTS",
+        "index": 242,
+        "col": 3,
+        "row": 16,
+        "pixel_x": 32,
+        "pixel_y": 240,
+        "width": 16,
+        "height": 14
+      },
+      {
+        "name": "ARTIFACT_TALISMAN",
+        "category": "ARTIFACTS",
+        "index": 243,
+        "col": 4,
+        "row": 16,
+        "pixel_x": 48,
+        "pixel_y": 240,
+        "width": 15,
+        "height": 13
+      },
+      {
+        "name": "ARTIFACT_HOURGLASS",
+        "category": "ARTIFACTS",
+        "index": 244,
+        "col": 5,
+        "row": 16,
+        "pixel_x": 64,
+        "pixel_y": 240,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "name": "ARTIFACT_TOOLKIT",
+        "category": "ARTIFACTS",
+        "index": 245,
+        "col": 6,
+        "row": 16,
+        "pixel_x": 80,
+        "pixel_y": 240,
+        "width": 15,
+        "height": 13
+      },
+      {
+        "name": "ARTIFACT_SPELLBOOK",
+        "category": "ARTIFACTS",
+        "index": 246,
+        "col": 7,
+        "row": 16,
+        "pixel_x": 96,
+        "pixel_y": 240,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "name": "ARTIFACT_BEACON",
+        "category": "ARTIFACTS",
+        "index": 247,
+        "col": 8,
+        "row": 16,
+        "pixel_x": 112,
+        "pixel_y": 240,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ARTIFACT_CHAINS",
+        "category": "ARTIFACTS",
+        "index": 248,
+        "col": 9,
+        "row": 16,
+        "pixel_x": 128,
+        "pixel_y": 240,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ARTIFACT_HORN1",
+        "category": "ARTIFACTS",
+        "index": 249,
+        "col": 10,
+        "row": 16,
+        "pixel_x": 144,
+        "pixel_y": 240,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "ARTIFACT_HORN2",
+        "category": "ARTIFACTS",
+        "index": 250,
+        "col": 11,
+        "row": 16,
+        "pixel_x": 160,
+        "pixel_y": 240,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "ARTIFACT_HORN3",
+        "category": "ARTIFACTS",
+        "index": 251,
+        "col": 12,
+        "row": 16,
+        "pixel_x": 176,
+        "pixel_y": 240,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "ARTIFACT_HORN4",
+        "category": "ARTIFACTS",
+        "index": 252,
+        "col": 13,
+        "row": 16,
+        "pixel_x": 192,
+        "pixel_y": 240,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "ARTIFACT_CHALICE1",
+        "category": "ARTIFACTS",
+        "index": 253,
+        "col": 14,
+        "row": 16,
+        "pixel_x": 208,
+        "pixel_y": 240,
+        "width": 12,
+        "height": 15
+      },
+      {
+        "name": "ARTIFACT_CHALICE2",
+        "category": "ARTIFACTS",
+        "index": 254,
+        "col": 15,
+        "row": 16,
+        "pixel_x": 224,
+        "pixel_y": 240,
+        "width": 12,
+        "height": 15
+      },
+      {
+        "name": "ARTIFACT_CHALICE3",
+        "category": "ARTIFACTS",
+        "index": 255,
+        "col": 16,
+        "row": 16,
+        "pixel_x": 240,
+        "pixel_y": 240,
+        "width": 12,
+        "height": 15
+      },
+      {
+        "name": "ARTIFACT_SANDALS",
+        "category": "ARTIFACTS",
+        "index": 256,
+        "col": 1,
+        "row": 17,
+        "pixel_x": 0,
+        "pixel_y": 256,
+        "width": 16,
+        "height": 6
+      },
+      {
+        "name": "ARTIFACT_SHOES",
+        "category": "ARTIFACTS",
+        "index": 257,
+        "col": 2,
+        "row": 17,
+        "pixel_x": 16,
+        "pixel_y": 256,
+        "width": 16,
+        "height": 6
+      },
+      {
+        "name": "ARTIFACT_BOOTS",
+        "category": "ARTIFACTS",
+        "index": 258,
+        "col": 3,
+        "row": 17,
+        "pixel_x": 32,
+        "pixel_y": 256,
+        "width": 16,
+        "height": 9
+      },
+      {
+        "name": "ARTIFACT_GREAVES",
+        "category": "ARTIFACTS",
+        "index": 259,
+        "col": 4,
+        "row": 17,
+        "pixel_x": 48,
+        "pixel_y": 256,
+        "width": 16,
+        "height": 14
+      },
+      {
+        "name": "ARTIFACT_ROSE1",
+        "category": "ARTIFACTS",
+        "index": 260,
+        "col": 5,
+        "row": 17,
+        "pixel_x": 64,
+        "pixel_y": 256,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "ARTIFACT_ROSE2",
+        "category": "ARTIFACTS",
+        "index": 261,
+        "col": 6,
+        "row": 17,
+        "pixel_x": 80,
+        "pixel_y": 256,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "ARTIFACT_ROSE3",
+        "category": "ARTIFACTS",
+        "index": 262,
+        "col": 7,
+        "row": 17,
+        "pixel_x": 96,
+        "pixel_y": 256,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "ARTIFACT_TOME",
+        "category": "ARTIFACTS",
+        "index": 263,
+        "col": 8,
+        "row": 17,
+        "pixel_x": 112,
+        "pixel_y": 256,
+        "width": 14,
+        "height": 16
+      },
+      {
+        "name": "ARTIFACT_KEY",
+        "category": "ARTIFACTS",
+        "index": 264,
+        "col": 9,
+        "row": 17,
+        "pixel_x": 128,
+        "pixel_y": 256,
+        "width": 8,
+        "height": 16
+      },
+      {
+        "name": "RAT_SKULL",
+        "category": "TRINKETS",
+        "index": 272,
+        "col": 1,
+        "row": 18,
+        "pixel_x": 0,
+        "pixel_y": 272,
+        "width": 16,
+        "height": 11
+      },
+      {
+        "name": "PARCHMENT_SCRAP",
+        "category": "TRINKETS",
+        "index": 273,
+        "col": 2,
+        "row": 18,
+        "pixel_x": 16,
+        "pixel_y": 272,
+        "width": 10,
+        "height": 14
+      },
+      {
+        "name": "PETRIFIED_SEED",
+        "category": "TRINKETS",
+        "index": 274,
+        "col": 3,
+        "row": 18,
+        "pixel_x": 32,
+        "pixel_y": 272,
+        "width": 10,
+        "height": 10
+      },
+      {
+        "name": "EXOTIC_CRYSTALS",
+        "category": "TRINKETS",
+        "index": 275,
+        "col": 4,
+        "row": 18,
+        "pixel_x": 48,
+        "pixel_y": 272,
+        "width": 14,
+        "height": 13
+      },
+      {
+        "name": "MOSSY_CLUMP",
+        "category": "TRINKETS",
+        "index": 276,
+        "col": 5,
+        "row": 18,
+        "pixel_x": 64,
+        "pixel_y": 272,
+        "width": 12,
+        "height": 11
+      },
+      {
+        "name": "SUNDIAL",
+        "category": "TRINKETS",
+        "index": 277,
+        "col": 6,
+        "row": 18,
+        "pixel_x": 80,
+        "pixel_y": 272,
+        "width": 16,
+        "height": 12
+      },
+      {
+        "name": "CLOVER",
+        "category": "TRINKETS",
+        "index": 278,
+        "col": 7,
+        "row": 18,
+        "pixel_x": 96,
+        "pixel_y": 272,
+        "width": 11,
+        "height": 15
+      },
+      {
+        "name": "TRAP_MECHANISM",
+        "category": "TRINKETS",
+        "index": 279,
+        "col": 8,
+        "row": 18,
+        "pixel_x": 112,
+        "pixel_y": 272,
+        "width": 13,
+        "height": 15
+      },
+      {
+        "name": "MIMIC_TOOTH",
+        "category": "TRINKETS",
+        "index": 280,
+        "col": 9,
+        "row": 18,
+        "pixel_x": 128,
+        "pixel_y": 272,
+        "width": 8,
+        "height": 15
+      },
+      {
+        "name": "WONDROUS_RESIN",
+        "category": "TRINKETS",
+        "index": 281,
+        "col": 10,
+        "row": 18,
+        "pixel_x": 144,
+        "pixel_y": 272,
+        "width": 12,
+        "height": 11
+      },
+      {
+        "name": "EYE_OF_NEWT",
+        "category": "TRINKETS",
+        "index": 282,
+        "col": 11,
+        "row": 18,
+        "pixel_x": 160,
+        "pixel_y": 272,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "SALT_CUBE",
+        "category": "TRINKETS",
+        "index": 283,
+        "col": 12,
+        "row": 18,
+        "pixel_x": 176,
+        "pixel_y": 272,
+        "width": 12,
+        "height": 13
+      },
+      {
+        "name": "BLOOD_VIAL",
+        "category": "TRINKETS",
+        "index": 284,
+        "col": 13,
+        "row": 18,
+        "pixel_x": 192,
+        "pixel_y": 272,
+        "width": 6,
+        "height": 15
+      },
+      {
+        "name": "OBLIVION_SHARD",
+        "category": "TRINKETS",
+        "index": 285,
+        "col": 14,
+        "row": 18,
+        "pixel_x": 208,
+        "pixel_y": 272,
+        "width": 7,
+        "height": 14
+      },
+      {
+        "name": "CHAOTIC_CENSER",
+        "category": "TRINKETS",
+        "index": 286,
+        "col": 15,
+        "row": 18,
+        "pixel_x": 224,
+        "pixel_y": 272,
+        "width": 13,
+        "height": 15
+      },
+      {
+        "name": "FERRET_TUFT",
+        "category": "TRINKETS",
+        "index": 287,
+        "col": 16,
+        "row": 18,
+        "pixel_x": 240,
+        "pixel_y": 272,
+        "width": 16,
+        "height": 15
+      },
+      {
+        "name": "SPYGLASS",
+        "category": "TRINKETS",
+        "index": 288,
+        "col": 1,
+        "row": 19,
+        "pixel_x": 0,
+        "pixel_y": 288,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "SCROLL_KAUNAN",
+        "category": "SCROLLS",
+        "index": 304,
+        "col": 1,
+        "row": 20,
+        "pixel_x": 0,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_SOWILO",
+        "category": "SCROLLS",
+        "index": 305,
+        "col": 2,
+        "row": 20,
+        "pixel_x": 16,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_LAGUZ",
+        "category": "SCROLLS",
+        "index": 306,
+        "col": 3,
+        "row": 20,
+        "pixel_x": 32,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_YNGVI",
+        "category": "SCROLLS",
+        "index": 307,
+        "col": 4,
+        "row": 20,
+        "pixel_x": 48,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_GYFU",
+        "category": "SCROLLS",
+        "index": 308,
+        "col": 5,
+        "row": 20,
+        "pixel_x": 64,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_RAIDO",
+        "category": "SCROLLS",
+        "index": 309,
+        "col": 6,
+        "row": 20,
+        "pixel_x": 80,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_ISAZ",
+        "category": "SCROLLS",
+        "index": 310,
+        "col": 7,
+        "row": 20,
+        "pixel_x": 96,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_MANNAZ",
+        "category": "SCROLLS",
+        "index": 311,
+        "col": 8,
+        "row": 20,
+        "pixel_x": 112,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_NAUDIZ",
+        "category": "SCROLLS",
+        "index": 312,
+        "col": 9,
+        "row": 20,
+        "pixel_x": 128,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_BERKANAN",
+        "category": "SCROLLS",
+        "index": 313,
+        "col": 10,
+        "row": 20,
+        "pixel_x": 144,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_ODAL",
+        "category": "SCROLLS",
+        "index": 314,
+        "col": 11,
+        "row": 20,
+        "pixel_x": 160,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SCROLL_TIWAZ",
+        "category": "SCROLLS",
+        "index": 315,
+        "col": 12,
+        "row": 20,
+        "pixel_x": 176,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ARCANE_RESIN",
+        "category": "SCROLLS",
+        "index": 317,
+        "col": 14,
+        "row": 20,
+        "pixel_x": 208,
+        "pixel_y": 304,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_KAUNAN",
+        "category": "EXOTIC_SCROLLS",
+        "index": 320,
+        "col": 1,
+        "row": 21,
+        "pixel_x": 0,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_SOWILO",
+        "category": "EXOTIC_SCROLLS",
+        "index": 321,
+        "col": 2,
+        "row": 21,
+        "pixel_x": 16,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_LAGUZ",
+        "category": "EXOTIC_SCROLLS",
+        "index": 322,
+        "col": 3,
+        "row": 21,
+        "pixel_x": 32,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_YNGVI",
+        "category": "EXOTIC_SCROLLS",
+        "index": 323,
+        "col": 4,
+        "row": 21,
+        "pixel_x": 48,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_GYFU",
+        "category": "EXOTIC_SCROLLS",
+        "index": 324,
+        "col": 5,
+        "row": 21,
+        "pixel_x": 64,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_RAIDO",
+        "category": "EXOTIC_SCROLLS",
+        "index": 325,
+        "col": 6,
+        "row": 21,
+        "pixel_x": 80,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_ISAZ",
+        "category": "EXOTIC_SCROLLS",
+        "index": 326,
+        "col": 7,
+        "row": 21,
+        "pixel_x": 96,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_MANNAZ",
+        "category": "EXOTIC_SCROLLS",
+        "index": 327,
+        "col": 8,
+        "row": 21,
+        "pixel_x": 112,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_NAUDIZ",
+        "category": "EXOTIC_SCROLLS",
+        "index": 328,
+        "col": 9,
+        "row": 21,
+        "pixel_x": 128,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_BERKANAN",
+        "category": "EXOTIC_SCROLLS",
+        "index": 329,
+        "col": 10,
+        "row": 21,
+        "pixel_x": 144,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_ODAL",
+        "category": "EXOTIC_SCROLLS",
+        "index": 330,
+        "col": 11,
+        "row": 21,
+        "pixel_x": 160,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_TIWAZ",
+        "category": "EXOTIC_SCROLLS",
+        "index": 331,
+        "col": 12,
+        "row": 21,
+        "pixel_x": 176,
+        "pixel_y": 320,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_AGGRESSION",
+        "category": "STONES",
+        "index": 336,
+        "col": 1,
+        "row": 22,
+        "pixel_x": 0,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_AUGMENTATION",
+        "category": "STONES",
+        "index": 337,
+        "col": 2,
+        "row": 22,
+        "pixel_x": 16,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_FEAR",
+        "category": "STONES",
+        "index": 338,
+        "col": 3,
+        "row": 22,
+        "pixel_x": 32,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_BLAST",
+        "category": "STONES",
+        "index": 339,
+        "col": 4,
+        "row": 22,
+        "pixel_x": 48,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_BLINK",
+        "category": "STONES",
+        "index": 340,
+        "col": 5,
+        "row": 22,
+        "pixel_x": 64,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_CLAIRVOYANCE",
+        "category": "STONES",
+        "index": 341,
+        "col": 6,
+        "row": 22,
+        "pixel_x": 80,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_SLEEP",
+        "category": "STONES",
+        "index": 342,
+        "col": 7,
+        "row": 22,
+        "pixel_x": 96,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_DETECT",
+        "category": "STONES",
+        "index": 343,
+        "col": 8,
+        "row": 22,
+        "pixel_x": 112,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_ENCHANT",
+        "category": "STONES",
+        "index": 344,
+        "col": 9,
+        "row": 22,
+        "pixel_x": 128,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_FLOCK",
+        "category": "STONES",
+        "index": 345,
+        "col": 10,
+        "row": 22,
+        "pixel_x": 144,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_INTUITION",
+        "category": "STONES",
+        "index": 346,
+        "col": 11,
+        "row": 22,
+        "pixel_x": 160,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "STONE_SHOCK",
+        "category": "STONES",
+        "index": 347,
+        "col": 12,
+        "row": 22,
+        "pixel_x": 176,
+        "pixel_y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_CRIMSON",
+        "category": "POTIONS",
+        "index": 352,
+        "col": 1,
+        "row": 23,
+        "pixel_x": 0,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_AMBER",
+        "category": "POTIONS",
+        "index": 353,
+        "col": 2,
+        "row": 23,
+        "pixel_x": 16,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_GOLDEN",
+        "category": "POTIONS",
+        "index": 354,
+        "col": 3,
+        "row": 23,
+        "pixel_x": 32,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_JADE",
+        "category": "POTIONS",
+        "index": 355,
+        "col": 4,
+        "row": 23,
+        "pixel_x": 48,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_TURQUOISE",
+        "category": "POTIONS",
+        "index": 356,
+        "col": 5,
+        "row": 23,
+        "pixel_x": 64,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_AZURE",
+        "category": "POTIONS",
+        "index": 357,
+        "col": 6,
+        "row": 23,
+        "pixel_x": 80,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_INDIGO",
+        "category": "POTIONS",
+        "index": 358,
+        "col": 7,
+        "row": 23,
+        "pixel_x": 96,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_MAGENTA",
+        "category": "POTIONS",
+        "index": 359,
+        "col": 8,
+        "row": 23,
+        "pixel_x": 112,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_BISTRE",
+        "category": "POTIONS",
+        "index": 360,
+        "col": 9,
+        "row": 23,
+        "pixel_x": 128,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_CHARCOAL",
+        "category": "POTIONS",
+        "index": 361,
+        "col": 10,
+        "row": 23,
+        "pixel_x": 144,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_SILVER",
+        "category": "POTIONS",
+        "index": 362,
+        "col": 11,
+        "row": 23,
+        "pixel_x": 160,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POTION_IVORY",
+        "category": "POTIONS",
+        "index": 363,
+        "col": 12,
+        "row": 23,
+        "pixel_x": 176,
+        "pixel_y": 352,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "LIQUID_METAL",
+        "category": "POTIONS",
+        "index": 365,
+        "col": 14,
+        "row": 23,
+        "pixel_x": 208,
+        "pixel_y": 352,
+        "width": 8,
+        "height": 15
+      },
+      {
+        "name": "EXOTIC_CRIMSON",
+        "category": "EXOTIC_POTIONS",
+        "index": 368,
+        "col": 1,
+        "row": 24,
+        "pixel_x": 0,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_AMBER",
+        "category": "EXOTIC_POTIONS",
+        "index": 369,
+        "col": 2,
+        "row": 24,
+        "pixel_x": 16,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_GOLDEN",
+        "category": "EXOTIC_POTIONS",
+        "index": 370,
+        "col": 3,
+        "row": 24,
+        "pixel_x": 32,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_JADE",
+        "category": "EXOTIC_POTIONS",
+        "index": 371,
+        "col": 4,
+        "row": 24,
+        "pixel_x": 48,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_TURQUOISE",
+        "category": "EXOTIC_POTIONS",
+        "index": 372,
+        "col": 5,
+        "row": 24,
+        "pixel_x": 64,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_AZURE",
+        "category": "EXOTIC_POTIONS",
+        "index": 373,
+        "col": 6,
+        "row": 24,
+        "pixel_x": 80,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_INDIGO",
+        "category": "EXOTIC_POTIONS",
+        "index": 374,
+        "col": 7,
+        "row": 24,
+        "pixel_x": 96,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_MAGENTA",
+        "category": "EXOTIC_POTIONS",
+        "index": 375,
+        "col": 8,
+        "row": 24,
+        "pixel_x": 112,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_BISTRE",
+        "category": "EXOTIC_POTIONS",
+        "index": 376,
+        "col": 9,
+        "row": 24,
+        "pixel_x": 128,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_CHARCOAL",
+        "category": "EXOTIC_POTIONS",
+        "index": 377,
+        "col": 10,
+        "row": 24,
+        "pixel_x": 144,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_SILVER",
+        "category": "EXOTIC_POTIONS",
+        "index": 378,
+        "col": 11,
+        "row": 24,
+        "pixel_x": 160,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EXOTIC_IVORY",
+        "category": "EXOTIC_POTIONS",
+        "index": 379,
+        "col": 12,
+        "row": 24,
+        "pixel_x": 176,
+        "pixel_y": 368,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_ROTBERRY",
+        "category": "SEEDS",
+        "index": 384,
+        "col": 1,
+        "row": 25,
+        "pixel_x": 0,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_FIREBLOOM",
+        "category": "SEEDS",
+        "index": 385,
+        "col": 2,
+        "row": 25,
+        "pixel_x": 16,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_SWIFTTHISTLE",
+        "category": "SEEDS",
+        "index": 386,
+        "col": 3,
+        "row": 25,
+        "pixel_x": 32,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_SUNGRASS",
+        "category": "SEEDS",
+        "index": 387,
+        "col": 4,
+        "row": 25,
+        "pixel_x": 48,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_ICECAP",
+        "category": "SEEDS",
+        "index": 388,
+        "col": 5,
+        "row": 25,
+        "pixel_x": 64,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_STORMVINE",
+        "category": "SEEDS",
+        "index": 389,
+        "col": 6,
+        "row": 25,
+        "pixel_x": 80,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_SORROWMOSS",
+        "category": "SEEDS",
+        "index": 390,
+        "col": 7,
+        "row": 25,
+        "pixel_x": 96,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_MAGEROYAL",
+        "category": "SEEDS",
+        "index": 391,
+        "col": 8,
+        "row": 25,
+        "pixel_x": 112,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_EARTHROOT",
+        "category": "SEEDS",
+        "index": 392,
+        "col": 9,
+        "row": 25,
+        "pixel_x": 128,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_STARFLOWER",
+        "category": "SEEDS",
+        "index": 393,
+        "col": 10,
+        "row": 25,
+        "pixel_x": 144,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_FADELEAF",
+        "category": "SEEDS",
+        "index": 394,
+        "col": 11,
+        "row": 25,
+        "pixel_x": 160,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "SEED_BLINDWEED",
+        "category": "SEEDS",
+        "index": 395,
+        "col": 12,
+        "row": 25,
+        "pixel_x": 176,
+        "pixel_y": 384,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "BREW_INFERNAL",
+        "category": "BREWS",
+        "index": 400,
+        "col": 1,
+        "row": 26,
+        "pixel_x": 0,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "BREW_BLIZZARD",
+        "category": "BREWS",
+        "index": 401,
+        "col": 2,
+        "row": 26,
+        "pixel_x": 16,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "BREW_SHOCKING",
+        "category": "BREWS",
+        "index": 402,
+        "col": 3,
+        "row": 26,
+        "pixel_x": 32,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "BREW_CAUSTIC",
+        "category": "BREWS",
+        "index": 403,
+        "col": 4,
+        "row": 26,
+        "pixel_x": 48,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "BREW_AQUA",
+        "category": "BREWS",
+        "index": 404,
+        "col": 5,
+        "row": 26,
+        "pixel_x": 64,
+        "pixel_y": 400,
+        "width": 9,
+        "height": 11
+      },
+      {
+        "name": "BREW_UNSTABLE",
+        "category": "BREWS",
+        "index": 405,
+        "col": 6,
+        "row": 26,
+        "pixel_x": 80,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ELIXIR_HONEY",
+        "category": "ELIXIRS",
+        "index": 408,
+        "col": 9,
+        "row": 26,
+        "pixel_x": 128,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ELIXIR_AQUA",
+        "category": "ELIXIRS",
+        "index": 409,
+        "col": 10,
+        "row": 26,
+        "pixel_x": 144,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ELIXIR_MIGHT",
+        "category": "ELIXIRS",
+        "index": 410,
+        "col": 11,
+        "row": 26,
+        "pixel_x": 160,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ELIXIR_DRAGON",
+        "category": "ELIXIRS",
+        "index": 411,
+        "col": 12,
+        "row": 26,
+        "pixel_x": 176,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ELIXIR_TOXIC",
+        "category": "ELIXIRS",
+        "index": 412,
+        "col": 13,
+        "row": 26,
+        "pixel_x": 192,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ELIXIR_ICY",
+        "category": "ELIXIRS",
+        "index": 413,
+        "col": 14,
+        "row": 26,
+        "pixel_x": 208,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ELIXIR_ARCANE",
+        "category": "ELIXIRS",
+        "index": 414,
+        "col": 15,
+        "row": 26,
+        "pixel_x": 224,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "ELIXIR_FEATHER",
+        "category": "ELIXIRS",
+        "index": 415,
+        "col": 16,
+        "row": 26,
+        "pixel_x": 240,
+        "pixel_y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "WILD_ENERGY",
+        "category": "SPELLS",
+        "index": 416,
+        "col": 1,
+        "row": 27,
+        "pixel_x": 0,
+        "pixel_y": 416,
+        "width": 12,
+        "height": 11
+      },
+      {
+        "name": "PHASE_SHIFT",
+        "category": "SPELLS",
+        "index": 417,
+        "col": 2,
+        "row": 27,
+        "pixel_x": 16,
+        "pixel_y": 416,
+        "width": 12,
+        "height": 11
+      },
+      {
+        "name": "TELE_GRAB",
+        "category": "SPELLS",
+        "index": 418,
+        "col": 3,
+        "row": 27,
+        "pixel_x": 32,
+        "pixel_y": 416,
+        "width": 12,
+        "height": 11
+      },
+      {
+        "name": "UNSTABLE_SPELL",
+        "category": "SPELLS",
+        "index": 419,
+        "col": 4,
+        "row": 27,
+        "pixel_x": 48,
+        "pixel_y": 416,
+        "width": 12,
+        "height": 13
+      },
+      {
+        "name": "CURSE_INFUSE",
+        "category": "SPELLS",
+        "index": 421,
+        "col": 6,
+        "row": 27,
+        "pixel_x": 80,
+        "pixel_y": 416,
+        "width": 10,
+        "height": 15
+      },
+      {
+        "name": "MAGIC_INFUSE",
+        "category": "SPELLS",
+        "index": 422,
+        "col": 7,
+        "row": 27,
+        "pixel_x": 96,
+        "pixel_y": 416,
+        "width": 10,
+        "height": 15
+      },
+      {
+        "name": "ALCHEMIZE",
+        "category": "SPELLS",
+        "index": 423,
+        "col": 8,
+        "row": 27,
+        "pixel_x": 112,
+        "pixel_y": 416,
+        "width": 10,
+        "height": 15
+      },
+      {
+        "name": "RECYCLE",
+        "category": "SPELLS",
+        "index": 424,
+        "col": 9,
+        "row": 27,
+        "pixel_x": 128,
+        "pixel_y": 416,
+        "width": 10,
+        "height": 15
+      },
+      {
+        "name": "RECLAIM_TRAP",
+        "category": "SPELLS",
+        "index": 426,
+        "col": 11,
+        "row": 27,
+        "pixel_x": 160,
+        "pixel_y": 416,
+        "width": 8,
+        "height": 16
+      },
+      {
+        "name": "RETURN_BEACON",
+        "category": "SPELLS",
+        "index": 427,
+        "col": 12,
+        "row": 27,
+        "pixel_x": 176,
+        "pixel_y": 416,
+        "width": 8,
+        "height": 16
+      },
+      {
+        "name": "SUMMON_ELE",
+        "category": "SPELLS",
+        "index": 428,
+        "col": 13,
+        "row": 27,
+        "pixel_x": 192,
+        "pixel_y": 416,
+        "width": 8,
+        "height": 16
+      },
+      {
+        "name": "MEAT",
+        "category": "FOOD",
+        "index": 432,
+        "col": 1,
+        "row": 28,
+        "pixel_x": 0,
+        "pixel_y": 432,
+        "width": 15,
+        "height": 11
+      },
+      {
+        "name": "STEAK",
+        "category": "FOOD",
+        "index": 433,
+        "col": 2,
+        "row": 28,
+        "pixel_x": 16,
+        "pixel_y": 432,
+        "width": 15,
+        "height": 11
+      },
+      {
+        "name": "STEWED",
+        "category": "FOOD",
+        "index": 434,
+        "col": 3,
+        "row": 28,
+        "pixel_x": 32,
+        "pixel_y": 432,
+        "width": 15,
+        "height": 11
+      },
+      {
+        "name": "OVERPRICED",
+        "category": "FOOD",
+        "index": 435,
+        "col": 4,
+        "row": 28,
+        "pixel_x": 48,
+        "pixel_y": 432,
+        "width": 14,
+        "height": 11
+      },
+      {
+        "name": "CARPACCIO",
+        "category": "FOOD",
+        "index": 436,
+        "col": 5,
+        "row": 28,
+        "pixel_x": 64,
+        "pixel_y": 432,
+        "width": 15,
+        "height": 11
+      },
+      {
+        "name": "RATION",
+        "category": "FOOD",
+        "index": 437,
+        "col": 6,
+        "row": 28,
+        "pixel_x": 80,
+        "pixel_y": 432,
+        "width": 16,
+        "height": 12
+      },
+      {
+        "name": "PASTY",
+        "category": "FOOD",
+        "index": 438,
+        "col": 7,
+        "row": 28,
+        "pixel_x": 96,
+        "pixel_y": 432,
+        "width": 16,
+        "height": 11
+      },
+      {
+        "name": "MEAT_PIE",
+        "category": "FOOD",
+        "index": 439,
+        "col": 8,
+        "row": 28,
+        "pixel_x": 112,
+        "pixel_y": 432,
+        "width": 16,
+        "height": 12
+      },
+      {
+        "name": "BLANDFRUIT",
+        "category": "FOOD",
+        "index": 440,
+        "col": 9,
+        "row": 28,
+        "pixel_x": 128,
+        "pixel_y": 432,
+        "width": 9,
+        "height": 12
+      },
+      {
+        "name": "BLAND_CHUNKS",
+        "category": "FOOD",
+        "index": 441,
+        "col": 10,
+        "row": 28,
+        "pixel_x": 144,
+        "pixel_y": 432,
+        "width": 14,
+        "height": 6
+      },
+      {
+        "name": "BERRY",
+        "category": "FOOD",
+        "index": 442,
+        "col": 11,
+        "row": 28,
+        "pixel_x": 160,
+        "pixel_y": 432,
+        "width": 9,
+        "height": 11
+      },
+      {
+        "name": "PHANTOM_MEAT",
+        "category": "FOOD",
+        "index": 443,
+        "col": 12,
+        "row": 28,
+        "pixel_x": 176,
+        "pixel_y": 432,
+        "width": 15,
+        "height": 11
+      },
+      {
+        "name": "SUPPLY_RATION",
+        "category": "FOOD",
+        "index": 444,
+        "col": 13,
+        "row": 28,
+        "pixel_x": 192,
+        "pixel_y": 432,
+        "width": 16,
+        "height": 12
+      },
+      {
+        "name": "STEAMED_FISH",
+        "category": "HOLIDAY_FOOD",
+        "index": 448,
+        "col": 1,
+        "row": 29,
+        "pixel_x": 0,
+        "pixel_y": 448,
+        "width": 16,
+        "height": 12
+      },
+      {
+        "name": "FISH_LEFTOVER",
+        "category": "HOLIDAY_FOOD",
+        "index": 449,
+        "col": 2,
+        "row": 29,
+        "pixel_x": 16,
+        "pixel_y": 448,
+        "width": 16,
+        "height": 12
+      },
+      {
+        "name": "CHOC_AMULET",
+        "category": "HOLIDAY_FOOD",
+        "index": 450,
+        "col": 3,
+        "row": 29,
+        "pixel_x": 32,
+        "pixel_y": 448,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "EASTER_EGG",
+        "category": "HOLIDAY_FOOD",
+        "index": 451,
+        "col": 4,
+        "row": 29,
+        "pixel_x": 48,
+        "pixel_y": 448,
+        "width": 12,
+        "height": 14
+      },
+      {
+        "name": "RAINBOW_POTION",
+        "category": "HOLIDAY_FOOD",
+        "index": 452,
+        "col": 5,
+        "row": 29,
+        "pixel_x": 64,
+        "pixel_y": 448,
+        "width": 12,
+        "height": 14
+      },
+      {
+        "name": "SHATTERED_CAKE",
+        "category": "HOLIDAY_FOOD",
+        "index": 453,
+        "col": 6,
+        "row": 29,
+        "pixel_x": 80,
+        "pixel_y": 448,
+        "width": 14,
+        "height": 13
+      },
+      {
+        "name": "PUMPKIN_PIE",
+        "category": "HOLIDAY_FOOD",
+        "index": 454,
+        "col": 7,
+        "row": 29,
+        "pixel_x": 96,
+        "pixel_y": 448,
+        "width": 16,
+        "height": 12
+      },
+      {
+        "name": "VANILLA_CAKE",
+        "category": "HOLIDAY_FOOD",
+        "index": 455,
+        "col": 8,
+        "row": 29,
+        "pixel_x": 112,
+        "pixel_y": 448,
+        "width": 14,
+        "height": 13
+      },
+      {
+        "name": "CANDY_CANE",
+        "category": "HOLIDAY_FOOD",
+        "index": 456,
+        "col": 9,
+        "row": 29,
+        "pixel_x": 128,
+        "pixel_y": 448,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "name": "SPARKLING_POTION",
+        "category": "HOLIDAY_FOOD",
+        "index": 457,
+        "col": 10,
+        "row": 29,
+        "pixel_x": 144,
+        "pixel_y": 448,
+        "width": 7,
+        "height": 16
+      },
+      {
+        "name": "DUST",
+        "category": "QUEST",
+        "index": 465,
+        "col": 2,
+        "row": 30,
+        "pixel_x": 16,
+        "pixel_y": 464,
+        "width": 12,
+        "height": 11
+      },
+      {
+        "name": "CANDLE",
+        "category": "QUEST",
+        "index": 466,
+        "col": 3,
+        "row": 30,
+        "pixel_x": 32,
+        "pixel_y": 464,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "EMBER",
+        "category": "QUEST",
+        "index": 467,
+        "col": 4,
+        "row": 30,
+        "pixel_x": 48,
+        "pixel_y": 464,
+        "width": 12,
+        "height": 11
+      },
+      {
+        "name": "PICKAXE",
+        "category": "QUEST",
+        "index": 468,
+        "col": 5,
+        "row": 30,
+        "pixel_x": 64,
+        "pixel_y": 464,
+        "width": 14,
+        "height": 14
+      },
+      {
+        "name": "ORE",
+        "category": "QUEST",
+        "index": 469,
+        "col": 6,
+        "row": 30,
+        "pixel_x": 80,
+        "pixel_y": 464,
+        "width": 15,
+        "height": 15
+      },
+      {
+        "name": "TOKEN",
+        "category": "QUEST",
+        "index": 470,
+        "col": 7,
+        "row": 30,
+        "pixel_x": 96,
+        "pixel_y": 464,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "BLOB",
+        "category": "QUEST",
+        "index": 471,
+        "col": 8,
+        "row": 30,
+        "pixel_x": 112,
+        "pixel_y": 464,
+        "width": 10,
+        "height": 9
+      },
+      {
+        "name": "SHARD",
+        "category": "QUEST",
+        "index": 472,
+        "col": 9,
+        "row": 30,
+        "pixel_x": 128,
+        "pixel_y": 464,
+        "width": 8,
+        "height": 10
+      },
+      {
+        "name": "ESCAPE",
+        "category": "QUEST",
+        "index": 473,
+        "col": 10,
+        "row": 30,
+        "pixel_x": 144,
+        "pixel_y": 464,
+        "width": 8,
+        "height": 16
+      },
+      {
+        "name": "WATERSKIN",
+        "category": "BAGS",
+        "index": 480,
+        "col": 1,
+        "row": 31,
+        "pixel_x": 0,
+        "pixel_y": 480,
+        "width": 16,
+        "height": 14
+      },
+      {
+        "name": "BACKPACK",
+        "category": "BAGS",
+        "index": 481,
+        "col": 2,
+        "row": 31,
+        "pixel_x": 16,
+        "pixel_y": 480,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "POUCH",
+        "category": "BAGS",
+        "index": 482,
+        "col": 3,
+        "row": 31,
+        "pixel_x": 32,
+        "pixel_y": 480,
+        "width": 14,
+        "height": 15
+      },
+      {
+        "name": "HOLDER",
+        "category": "BAGS",
+        "index": 483,
+        "col": 4,
+        "row": 31,
+        "pixel_x": 48,
+        "pixel_y": 480,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "name": "BANDOLIER",
+        "category": "BAGS",
+        "index": 484,
+        "col": 5,
+        "row": 31,
+        "pixel_x": 64,
+        "pixel_y": 480,
+        "width": 15,
+        "height": 16
+      },
+      {
+        "name": "HOLSTER",
+        "category": "BAGS",
+        "index": 485,
+        "col": 6,
+        "row": 31,
+        "pixel_x": 80,
+        "pixel_y": 480,
+        "width": 15,
+        "height": 16
+      },
+      {
+        "name": "VIAL",
+        "category": "BAGS",
+        "index": 486,
+        "col": 7,
+        "row": 31,
+        "pixel_x": 96,
+        "pixel_y": 480,
+        "width": 12,
+        "height": 12
+      },
+      {
+        "name": "GUIDE_PAGE",
+        "category": "DOCUMENTS",
+        "index": 496,
+        "col": 1,
+        "row": 32,
+        "pixel_x": 0,
+        "pixel_y": 496,
+        "width": 10,
+        "height": 11
+      },
+      {
+        "name": "ALCH_PAGE",
+        "category": "DOCUMENTS",
+        "index": 497,
+        "col": 2,
+        "row": 32,
+        "pixel_x": 16,
+        "pixel_y": 496,
+        "width": 10,
+        "height": 11
+      },
+      {
+        "name": "SEWER_PAGE",
+        "category": "DOCUMENTS",
+        "index": 498,
+        "col": 3,
+        "row": 32,
+        "pixel_x": 32,
+        "pixel_y": 496,
+        "width": 10,
+        "height": 11
+      },
+      {
+        "name": "PRISON_PAGE",
+        "category": "DOCUMENTS",
+        "index": 499,
+        "col": 4,
+        "row": 32,
+        "pixel_x": 48,
+        "pixel_y": 496,
+        "width": 10,
+        "height": 11
+      },
+      {
+        "name": "CAVES_PAGE",
+        "category": "DOCUMENTS",
+        "index": 500,
+        "col": 5,
+        "row": 32,
+        "pixel_x": 64,
+        "pixel_y": 496,
+        "width": 10,
+        "height": 11
+      },
+      {
+        "name": "CITY_PAGE",
+        "category": "DOCUMENTS",
+        "index": 501,
+        "col": 6,
+        "row": 32,
+        "pixel_x": 80,
+        "pixel_y": 496,
+        "width": 10,
+        "height": 11
+      },
+      {
+        "name": "HALLS_PAGE",
+        "category": "DOCUMENTS",
+        "index": 502,
+        "col": 7,
+        "row": 32,
+        "pixel_x": 96,
+        "pixel_y": 496,
+        "width": 10,
+        "height": 11
+      }
+    ],
+    "item_icons": {
+      "file": "sprites/item_icons.png",
+      "canvas_size": [
+        128,
+        64
+      ],
+      "mode": "P",
+      "grid_width": 16,
+      "grid_height": 8,
+      "tile_size": 8,
+      "status": "pending",
+      "notes": "item_icons.png is 128x64 (16x8 grid of 8x8 mini-icons for rings, scrolls, and potions).",
+      "icons": [
+        {
+          "name": "RING_ACCURACY",
+          "category": "RINGS",
+          "index": 0,
+          "col": 1,
+          "row": 1,
+          "pixel_x": 0,
+          "pixel_y": 0,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "RING_ARCANA",
+          "category": "RINGS",
+          "index": 1,
+          "col": 2,
+          "row": 1,
+          "pixel_x": 8,
+          "pixel_y": 0,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "RING_ELEMENTS",
+          "category": "RINGS",
+          "index": 2,
+          "col": 3,
+          "row": 1,
+          "pixel_x": 16,
+          "pixel_y": 0,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "RING_ENERGY",
+          "category": "RINGS",
+          "index": 3,
+          "col": 4,
+          "row": 1,
+          "pixel_x": 24,
+          "pixel_y": 0,
+          "width": 7,
+          "height": 5
+        },
+        {
+          "name": "RING_EVASION",
+          "category": "RINGS",
+          "index": 4,
+          "col": 5,
+          "row": 1,
+          "pixel_x": 32,
+          "pixel_y": 0,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "RING_FORCE",
+          "category": "RINGS",
+          "index": 5,
+          "col": 6,
+          "row": 1,
+          "pixel_x": 40,
+          "pixel_y": 0,
+          "width": 5,
+          "height": 6
+        },
+        {
+          "name": "RING_FUROR",
+          "category": "RINGS",
+          "index": 6,
+          "col": 7,
+          "row": 1,
+          "pixel_x": 48,
+          "pixel_y": 0,
+          "width": 7,
+          "height": 6
+        },
+        {
+          "name": "RING_HASTE",
+          "category": "RINGS",
+          "index": 7,
+          "col": 8,
+          "row": 1,
+          "pixel_x": 56,
+          "pixel_y": 0,
+          "width": 6,
+          "height": 6
+        },
+        {
+          "name": "RING_MIGHT",
+          "category": "RINGS",
+          "index": 8,
+          "col": 9,
+          "row": 1,
+          "pixel_x": 64,
+          "pixel_y": 0,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "RING_SHARPSHOOT",
+          "category": "RINGS",
+          "index": 9,
+          "col": 10,
+          "row": 1,
+          "pixel_x": 72,
+          "pixel_y": 0,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "RING_TENACITY",
+          "category": "RINGS",
+          "index": 10,
+          "col": 11,
+          "row": 1,
+          "pixel_x": 80,
+          "pixel_y": 0,
+          "width": 6,
+          "height": 6
+        },
+        {
+          "name": "RING_WEALTH",
+          "category": "RINGS",
+          "index": 11,
+          "col": 12,
+          "row": 1,
+          "pixel_x": 88,
+          "pixel_y": 0,
+          "width": 7,
+          "height": 6
+        },
+        {
+          "name": "SCROLL_UPGRADE",
+          "category": "SCROLLS",
+          "index": 32,
+          "col": 1,
+          "row": 3,
+          "pixel_x": 0,
+          "pixel_y": 16,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_IDENTIFY",
+          "category": "SCROLLS",
+          "index": 33,
+          "col": 2,
+          "row": 3,
+          "pixel_x": 8,
+          "pixel_y": 16,
+          "width": 4,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_REMCURSE",
+          "category": "SCROLLS",
+          "index": 34,
+          "col": 3,
+          "row": 3,
+          "pixel_x": 16,
+          "pixel_y": 16,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_MIRRORIMG",
+          "category": "SCROLLS",
+          "index": 35,
+          "col": 4,
+          "row": 3,
+          "pixel_x": 24,
+          "pixel_y": 16,
+          "width": 7,
+          "height": 5
+        },
+        {
+          "name": "SCROLL_RECHARGE",
+          "category": "SCROLLS",
+          "index": 36,
+          "col": 5,
+          "row": 3,
+          "pixel_x": 32,
+          "pixel_y": 16,
+          "width": 7,
+          "height": 5
+        },
+        {
+          "name": "SCROLL_TELEPORT",
+          "category": "SCROLLS",
+          "index": 37,
+          "col": 6,
+          "row": 3,
+          "pixel_x": 40,
+          "pixel_y": 16,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_LULLABY",
+          "category": "SCROLLS",
+          "index": 38,
+          "col": 7,
+          "row": 3,
+          "pixel_x": 48,
+          "pixel_y": 16,
+          "width": 7,
+          "height": 6
+        },
+        {
+          "name": "SCROLL_MAGICMAP",
+          "category": "SCROLLS",
+          "index": 39,
+          "col": 8,
+          "row": 3,
+          "pixel_x": 56,
+          "pixel_y": 16,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_RAGE",
+          "category": "SCROLLS",
+          "index": 40,
+          "col": 9,
+          "row": 3,
+          "pixel_x": 64,
+          "pixel_y": 16,
+          "width": 6,
+          "height": 6
+        },
+        {
+          "name": "SCROLL_RETRIB",
+          "category": "SCROLLS",
+          "index": 41,
+          "col": 10,
+          "row": 3,
+          "pixel_x": 72,
+          "pixel_y": 16,
+          "width": 5,
+          "height": 6
+        },
+        {
+          "name": "SCROLL_TERROR",
+          "category": "SCROLLS",
+          "index": 42,
+          "col": 11,
+          "row": 3,
+          "pixel_x": 80,
+          "pixel_y": 16,
+          "width": 5,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_TRANSMUTE",
+          "category": "SCROLLS",
+          "index": 43,
+          "col": 12,
+          "row": 3,
+          "pixel_x": 88,
+          "pixel_y": 16,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_ENCHANT",
+          "category": "EXOTIC_SCROLLS",
+          "index": 48,
+          "col": 1,
+          "row": 4,
+          "pixel_x": 0,
+          "pixel_y": 24,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_DIVINATE",
+          "category": "EXOTIC_SCROLLS",
+          "index": 49,
+          "col": 2,
+          "row": 4,
+          "pixel_x": 8,
+          "pixel_y": 24,
+          "width": 7,
+          "height": 6
+        },
+        {
+          "name": "SCROLL_ANTIMAGIC",
+          "category": "EXOTIC_SCROLLS",
+          "index": 50,
+          "col": 3,
+          "row": 4,
+          "pixel_x": 16,
+          "pixel_y": 24,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_PRISIMG",
+          "category": "EXOTIC_SCROLLS",
+          "index": 51,
+          "col": 4,
+          "row": 4,
+          "pixel_x": 24,
+          "pixel_y": 24,
+          "width": 5,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_MYSTENRG",
+          "category": "EXOTIC_SCROLLS",
+          "index": 52,
+          "col": 5,
+          "row": 4,
+          "pixel_x": 32,
+          "pixel_y": 24,
+          "width": 7,
+          "height": 5
+        },
+        {
+          "name": "SCROLL_PASSAGE",
+          "category": "EXOTIC_SCROLLS",
+          "index": 53,
+          "col": 6,
+          "row": 4,
+          "pixel_x": 40,
+          "pixel_y": 24,
+          "width": 5,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_SIREN",
+          "category": "EXOTIC_SCROLLS",
+          "index": 54,
+          "col": 7,
+          "row": 4,
+          "pixel_x": 48,
+          "pixel_y": 24,
+          "width": 7,
+          "height": 6
+        },
+        {
+          "name": "SCROLL_FORESIGHT",
+          "category": "EXOTIC_SCROLLS",
+          "index": 55,
+          "col": 8,
+          "row": 4,
+          "pixel_x": 56,
+          "pixel_y": 24,
+          "width": 7,
+          "height": 5
+        },
+        {
+          "name": "SCROLL_CHALLENGE",
+          "category": "EXOTIC_SCROLLS",
+          "index": 56,
+          "col": 9,
+          "row": 4,
+          "pixel_x": 64,
+          "pixel_y": 24,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_PSIBLAST",
+          "category": "EXOTIC_SCROLLS",
+          "index": 57,
+          "col": 10,
+          "row": 4,
+          "pixel_x": 72,
+          "pixel_y": 24,
+          "width": 5,
+          "height": 6
+        },
+        {
+          "name": "SCROLL_DREAD",
+          "category": "EXOTIC_SCROLLS",
+          "index": 58,
+          "col": 11,
+          "row": 4,
+          "pixel_x": 80,
+          "pixel_y": 24,
+          "width": 5,
+          "height": 7
+        },
+        {
+          "name": "SCROLL_METAMORPH",
+          "category": "EXOTIC_SCROLLS",
+          "index": 59,
+          "col": 12,
+          "row": 4,
+          "pixel_x": 88,
+          "pixel_y": 24,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_STRENGTH",
+          "category": "POTIONS",
+          "index": 80,
+          "col": 1,
+          "row": 6,
+          "pixel_x": 0,
+          "pixel_y": 40,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_HEALING",
+          "category": "POTIONS",
+          "index": 81,
+          "col": 2,
+          "row": 6,
+          "pixel_x": 8,
+          "pixel_y": 40,
+          "width": 6,
+          "height": 7
+        },
+        {
+          "name": "POTION_MINDVIS",
+          "category": "POTIONS",
+          "index": 82,
+          "col": 3,
+          "row": 6,
+          "pixel_x": 16,
+          "pixel_y": 40,
+          "width": 7,
+          "height": 5
+        },
+        {
+          "name": "POTION_FROST",
+          "category": "POTIONS",
+          "index": 83,
+          "col": 4,
+          "row": 6,
+          "pixel_x": 24,
+          "pixel_y": 40,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_LIQFLAME",
+          "category": "POTIONS",
+          "index": 84,
+          "col": 5,
+          "row": 6,
+          "pixel_x": 32,
+          "pixel_y": 40,
+          "width": 5,
+          "height": 7
+        },
+        {
+          "name": "POTION_TOXICGAS",
+          "category": "POTIONS",
+          "index": 85,
+          "col": 6,
+          "row": 6,
+          "pixel_x": 40,
+          "pixel_y": 40,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_HASTE",
+          "category": "POTIONS",
+          "index": 86,
+          "col": 7,
+          "row": 6,
+          "pixel_x": 48,
+          "pixel_y": 40,
+          "width": 6,
+          "height": 6
+        },
+        {
+          "name": "POTION_INVIS",
+          "category": "POTIONS",
+          "index": 87,
+          "col": 8,
+          "row": 6,
+          "pixel_x": 56,
+          "pixel_y": 40,
+          "width": 5,
+          "height": 7
+        },
+        {
+          "name": "POTION_LEVITATE",
+          "category": "POTIONS",
+          "index": 88,
+          "col": 9,
+          "row": 6,
+          "pixel_x": 64,
+          "pixel_y": 40,
+          "width": 6,
+          "height": 7
+        },
+        {
+          "name": "POTION_PARAGAS",
+          "category": "POTIONS",
+          "index": 89,
+          "col": 10,
+          "row": 6,
+          "pixel_x": 72,
+          "pixel_y": 40,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_PURITY",
+          "category": "POTIONS",
+          "index": 90,
+          "col": 11,
+          "row": 6,
+          "pixel_x": 80,
+          "pixel_y": 40,
+          "width": 5,
+          "height": 7
+        },
+        {
+          "name": "POTION_EXP",
+          "category": "POTIONS",
+          "index": 91,
+          "col": 12,
+          "row": 6,
+          "pixel_x": 88,
+          "pixel_y": 40,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_MASTERY",
+          "category": "EXOTIC_POTIONS",
+          "index": 96,
+          "col": 1,
+          "row": 7,
+          "pixel_x": 0,
+          "pixel_y": 48,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_SHIELDING",
+          "category": "EXOTIC_POTIONS",
+          "index": 97,
+          "col": 2,
+          "row": 7,
+          "pixel_x": 8,
+          "pixel_y": 48,
+          "width": 6,
+          "height": 6
+        },
+        {
+          "name": "POTION_MAGISIGHT",
+          "category": "EXOTIC_POTIONS",
+          "index": 98,
+          "col": 3,
+          "row": 7,
+          "pixel_x": 16,
+          "pixel_y": 48,
+          "width": 7,
+          "height": 5
+        },
+        {
+          "name": "POTION_SNAPFREEZ",
+          "category": "EXOTIC_POTIONS",
+          "index": 99,
+          "col": 4,
+          "row": 7,
+          "pixel_x": 24,
+          "pixel_y": 48,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_DRGBREATH",
+          "category": "EXOTIC_POTIONS",
+          "index": 100,
+          "col": 5,
+          "row": 7,
+          "pixel_x": 32,
+          "pixel_y": 48,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_CORROGAS",
+          "category": "EXOTIC_POTIONS",
+          "index": 101,
+          "col": 6,
+          "row": 7,
+          "pixel_x": 40,
+          "pixel_y": 48,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_STAMINA",
+          "category": "EXOTIC_POTIONS",
+          "index": 102,
+          "col": 7,
+          "row": 7,
+          "pixel_x": 48,
+          "pixel_y": 48,
+          "width": 6,
+          "height": 6
+        },
+        {
+          "name": "POTION_SHROUDFOG",
+          "category": "EXOTIC_POTIONS",
+          "index": 103,
+          "col": 8,
+          "row": 7,
+          "pixel_x": 56,
+          "pixel_y": 48,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_STRMCLOUD",
+          "category": "EXOTIC_POTIONS",
+          "index": 104,
+          "col": 9,
+          "row": 7,
+          "pixel_x": 64,
+          "pixel_y": 48,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_EARTHARMR",
+          "category": "EXOTIC_POTIONS",
+          "index": 105,
+          "col": 10,
+          "row": 7,
+          "pixel_x": 72,
+          "pixel_y": 48,
+          "width": 6,
+          "height": 6
+        },
+        {
+          "name": "POTION_CLEANSE",
+          "category": "EXOTIC_POTIONS",
+          "index": 106,
+          "col": 11,
+          "row": 7,
+          "pixel_x": 80,
+          "pixel_y": 48,
+          "width": 7,
+          "height": 7
+        },
+        {
+          "name": "POTION_DIVINE",
+          "category": "EXOTIC_POTIONS",
+          "index": 107,
+          "col": 12,
+          "row": 7,
+          "pixel_x": 88,
+          "pixel_y": 48,
+          "width": 7,
+          "height": 7
+        }
+      ]
+    }
+  },
+  "heroes": {
+    "canvas_size": [
+      256,
+      128
+    ],
+    "mode": "P",
+    "frame_width": 12,
+    "frame_height": 15,
+    "frames_per_row": 21,
+    "populated_rows": 7,
+    "head_region_y": "y % 15 < 8",
+    "body_region_y": "y % 15 >= 8",
+    "ghost_frames": {
+      "frame_indices_12px": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "pixel_x_range": [
+        96,
+        155
+      ],
+      "notes": "Greyscale skull/ghost death animation; identical across all armor rows. Do not tint during PPE armor swaps."
+    },
+    "head_offsets_by_frame": {
+      "0": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "idle_front"
+      },
+      "1": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "idle_look_back_mirrored"
+      },
+      "2": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "run_1"
+      },
+      "3": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "run_2"
+      },
+      "4": {
+        "dx": 0,
+        "dy": 1,
+        "pose": "run_3_head_bob_down_1px"
+      },
+      "5": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "run_4"
+      },
+      "6": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "run_5"
+      },
+      "7": {
+        "dx": 0,
+        "dy": 1,
+        "pose": "run_6_head_bob_down_1px"
+      },
+      "13": {
+        "dx": -1,
+        "dy": 0,
+        "pose": "attack_windup_left_1px"
+      },
+      "14": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "attack_mid"
+      },
+      "15": {
+        "dx": 1,
+        "dy": 0,
+        "pose": "attack_lunge_right_1px"
+      },
+      "16": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "operate_look_down"
+      },
+      "17": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "operate_look_down"
+      },
+      "18": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "fly"
+      },
+      "19": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "read_start_look_down"
+      },
+      "20": {
+        "dx": 0,
+        "dy": 0,
+        "pose": "read_hold_form"
+      }
+    },
+    "armor_tiers": [
+      {
+        "tier": 0,
+        "row_y": 0,
+        "name": "Unarmored (Work Shirt & Slacks)"
+      },
+      {
+        "tier": 1,
+        "row_y": 15,
+        "name": "Cotton Coveralls"
+      },
+      {
+        "tier": 2,
+        "row_y": 30,
+        "name": "Heavy-Duty Apron"
+      },
+      {
+        "tier": 3,
+        "row_y": 45,
+        "name": "Kevlar Vest"
+      },
+      {
+        "tier": 4,
+        "row_y": 60,
+        "name": "Riot Gear"
+      },
+      {
+        "tier": 5,
+        "row_y": 75,
+        "name": "Hazmat Suit"
+      },
+      {
+        "tier": 6,
+        "row_y": 90,
+        "name": "Specialized Class Rig"
+      }
+    ],
+    "classes": [
+      {
+        "id": "warrior",
+        "file": "sprites/warrior.png",
+        "lore_name": "Janitor",
+        "subclasses": [
+          "Scrubber",
+          "Polisher"
+        ],
+        "avatar_index": 0,
+        "status": "done"
+      },
+      {
+        "id": "mage",
+        "file": "sprites/mage.png",
+        "lore_name": "Lab Tech",
+        "subclasses": [
+          "Mixer",
+          "Toxicologist"
+        ],
+        "avatar_index": 1,
+        "status": "done"
+      },
+      {
+        "id": "rogue",
+        "file": "sprites/rogue.png",
+        "lore_name": "Security Guard",
+        "subclasses": [
+          "Enforcer",
+          "Patrolman"
+        ],
+        "avatar_index": 2,
+        "status": "done"
+      },
+      {
+        "id": "huntress",
+        "file": "sprites/huntress.png",
+        "lore_name": "Exterminator",
+        "subclasses": [
+          "Sharpshooter",
+          "Groundskeeper"
+        ],
+        "avatar_index": 3,
+        "status": "done"
+      },
+      {
+        "id": "duelist",
+        "file": "sprites/duelist.png",
+        "lore_name": "Mechanic",
+        "subclasses": [
+          "Foreman",
+          "Ergonomist"
+        ],
+        "avatar_index": 4,
+        "status": "done"
+      },
+      {
+        "id": "cleric",
+        "file": "sprites/cleric.png",
+        "lore_name": "Supervisor",
+        "subclasses": [
+          "Auditor",
+          "Inspector"
+        ],
+        "avatar_index": 5,
+        "status": "done"
+      }
+    ],
+    "avatars": {
+      "file": "sprites/avatars.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "frame_width": 24,
+      "frame_height": 32,
+      "status": "done"
+    }
+  },
+  "interfaces": [
+    {
+      "file": "interfaces/arcs1.png",
+      "canvas_size": [
+        32,
+        32
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/arcs2.png",
+      "canvas_size": [
+        64,
+        64
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/badges.png",
+      "canvas_size": [
+        128,
+        256
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/banners.png",
+      "canvas_size": [
+        512,
+        256
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/boss_hp.png",
+      "canvas_size": [
+        128,
+        64
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/buffs.png",
+      "canvas_size": [
+        128,
+        64
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/chrome.png",
+      "canvas_size": [
+        128,
+        64
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/hero_icons.png",
+      "canvas_size": [
+        128,
+        256
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/icons.png",
+      "canvas_size": [
+        256,
+        128
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/large_buffs.png",
+      "canvas_size": [
+        256,
+        128
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/locked_badge.png",
+      "canvas_size": [
+        16,
+        16
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/menu_button.png",
+      "canvas_size": [
+        64,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/menu_pane.png",
+      "canvas_size": [
+        32,
+        32
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/radial_menu.png",
+      "canvas_size": [
+        512,
+        256
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/shadow.png",
+      "canvas_size": [
+        4,
+        4
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/status_pane.png",
+      "canvas_size": [
+        128,
+        128
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/surface.png",
+      "canvas_size": [
+        256,
+        128
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/talent_button.png",
+      "canvas_size": [
+        128,
+        32
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/talent_icons.png",
+      "canvas_size": [
+        512,
+        128
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "interfaces/toolbar.png",
+      "canvas_size": [
+        256,
+        32
+      ],
+      "mode": "P",
+      "status": "pending"
+    }
+  ],
+  "effects": [
+    {
+      "file": "effects/effects.png",
+      "canvas_size": [
+        32,
+        64
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    {
+      "file": "effects/fireball-short.png",
+      "canvas_size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    {
+      "file": "effects/fireball-tall.png",
+      "canvas_size": [
+        256,
+        512
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    {
+      "file": "effects/specks.png",
+      "canvas_size": [
+        128,
+        8
+      ],
+      "mode": "RGBA",
+      "status": "pending"
+    },
+    {
+      "file": "effects/spell_icons.png",
+      "canvas_size": [
+        128,
+        16
+      ],
+      "mode": "P",
+      "status": "pending"
+    },
+    {
+      "file": "effects/text_icons.png",
+      "canvas_size": [
+        128,
+        64
+      ],
+      "mode": "P",
+      "status": "pending"
+    }
+  ]
 }

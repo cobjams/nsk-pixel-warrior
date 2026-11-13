@@ -1,0 +1,12 @@
+# Mobs, NPCs & Bosses Visual References (Phase 4)
+
+Reference imagery for Phase 4 sprite conversions in [`docs/VISUAL_CONVERSION_PLAN.md`](../../VISUAL_CONVERSION_PLAN.md) (`core/src/main/assets/sprites/*.png`).
+
+| Filename | Target Game Assets | Visual Notes | Source URL |
+| :--- | :--- | :--- | :--- |
+| `boss_heavy_excavator_loader.jpg` | `sprites/dm300.png`, `sprites/dm200.png` (Corrupted Mech / Heavy Factory Loader Boss) | 1024x682. Articulated white industrial robot arm inside a safety-glass manufacturing cell with control HMI, yellow/red emergency-stop button, and heavy chain-drive mechanism. | https://commons.wikimedia.org/wiki/File:Robot_arm_operates_machine_in_factory_setting.jpg |
+| `mob_autonomous_floor_scrubber.jpg` | `sprites/guard.png`, `sprites/thief.png` (Rogue Roomba / Autonomous Floor Scrubber Bot) | 771x1024. Teal-blue autonomous industrial floor scrubber featuring cylindrical top LiDAR beacon, red e-stop button, caster wheels, and bottom rotary brush/squeegee deck. | https://commons.wikimedia.org/wiki/File:X4_ROVR_Autonomous_Floor_Scrubber_in_Morrisons,_Worthing_2025-12-08.jpg |
+| `mob_high_voltage_tesla_arc.jpg` | `sprites/dm100.png`, `sprites/pylon.png` (High-Voltage Arc Turret / Power Pylon) | 800x450. Long-exposure shot of copper secondary coil and aluminum toroid discharging branching violet-cyan electrical arcs against a ribbed steel industrial shutter door. | https://commons.wikimedia.org/wiki/File:Tesla_coil_with_a_long-exposure.jpg |
+| `mob_laboratory_white_rat.jpg` | `sprites/rat.png` (Mutated Lab Rat) | 1024x682. Crisp close-up of an albino Wistar laboratory rat held in a gloved hand; shows pink ears/snout/claws, red eyes, and dense white fur for Sector 1 mutated lab rat sprites. | https://commons.wikimedia.org/wiki/File:Wistar_rat.jpg |
+| `npc_snack_vending_machine.jpg` | `sprites/shopkeeper.png` (Vending Machine Dispenser) | 768x1024. Glass-front snack and beverage vending machine with illuminated product coils, numeric selection screen, bill/coin acceptor, and bottom retrieval chute. | https://commons.wikimedia.org/wiki/File:Snack_and_soda_water_vending_machine,_Leningrad_Railway_Station,_Moscow_November_2022.jpg |
+| `prop_industrial_security_camera.jpg` | `sprites/red_sentry.png`, `sprites/wards.png` (CCTV Security Turret / Surveillance Ward) | 1024x768. Wall-mounted weathered grey-white dome CCTV turret on a heavy metal bracket with dark tinted hemisphere housing and exposed conduit wiring. | https://commons.wikimedia.org/wiki/File:CCTV_dome_camera.jpg |

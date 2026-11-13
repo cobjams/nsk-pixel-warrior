@@ -7,3 +7,15 @@ dependencies {
     api project(':SPD-classes')
     implementation project(':services')
 }
+
+tasks.register('smokeTest', JavaExec) {
+    group = 'verification'
+    description = 'Runs zero-dependency headless asset and string formatting smoke tests.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.shatteredpixel.shatteredpixeldungeon.HeadlessAssetAndStringSmokeTest'
+    workingDir = rootProject.projectDir
+}
+
+tasks.named('test') {
+    dependsOn('smokeTest')
+}
